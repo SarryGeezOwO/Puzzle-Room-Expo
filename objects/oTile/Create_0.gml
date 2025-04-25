@@ -1,0 +1,1 @@
+index = irandom(1)
