@@ -1,4 +1,5 @@
 global.minigames = ds_map_create();
+global.gameTime = 180; // 3 Minutes or something IDK
 
 function addGame(g_id, type) {
 	ds_map_add(global.minigames, g_id, type)	

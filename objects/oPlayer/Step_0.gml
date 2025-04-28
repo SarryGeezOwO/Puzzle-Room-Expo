@@ -3,7 +3,7 @@ sKey = keyboard_check( ord("S") )
 aKey = keyboard_check( ord("A") )
 dKey = keyboard_check( ord("D") )
 
-isInteracting = keyboard_check( ord("E") )
+isInteracting = keyboard_check( vk_space )
 	
 rawInput[0] = dKey - aKey;
 rawInput[1] = sKey - wKey;
