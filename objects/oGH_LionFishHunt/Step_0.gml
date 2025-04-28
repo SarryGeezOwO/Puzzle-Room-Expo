@@ -9,7 +9,11 @@ if (harpoonLeft <= 0) {
 	gameEnd();
 }
 
-if (shootKey && fireTimer <= 0 && !gameOver)
+if (shootKey && fireTimer <= 0)
 {
-	shoot();
+	if (gameOver) {
+		oGameManager.goback_game()
+		global.stopGameTime = false
+	}
+	else shoot();
 }

@@ -1,7 +1,9 @@
+
+
 if isInRange()
 {
 	draw_set_alpha(0.5)
-	draw_circle(x, y, range, false)
+	draw_circle(x, y-10, range, false)
 }
 
 var topOffset = -30
@@ -23,7 +25,11 @@ if interact_prog > 0
 		(x + 50), y + topOffset, 
 		true
 	)
-
+}
+else {
+	// Notice
+	var i = isInRange() ? 1 : 0;
+	draw_sprite_ext(sNotice, i, x, y-25, 0.5, 0.5, 0, c_white, 1)	
 }
 
 draw_set_colour(c_white)

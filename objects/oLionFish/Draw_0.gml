@@ -1,0 +1,1 @@
+draw_sprite_ext(sLionFish, -1, x, y, lookDir * 2, image_yscale, 0, c_white, 1)

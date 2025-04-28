@@ -1,0 +1,1 @@
+oGH_LionFishHunt.gameScore++

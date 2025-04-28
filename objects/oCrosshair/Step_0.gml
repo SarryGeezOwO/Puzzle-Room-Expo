@@ -12,3 +12,7 @@ vy = inp[1] * spd;
 
 x += vx;
 y += vy;
+
+if (oGH_LionFishHunt.gameOver) {
+	instance_destroy(id, false)	
+}
