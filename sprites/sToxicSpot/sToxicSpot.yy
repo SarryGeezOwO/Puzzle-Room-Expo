@@ -19,7 +19,7 @@
   "height":96,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"01344162-28c8-4f9a-818b-2ebbbb0803e8","blendMode":0,"displayName":"default","isLocked":false,"name":"01344162-28c8-4f9a-818b-2ebbbb0803e8","opacity":60.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"01344162-28c8-4f9a-818b-2ebbbb0803e8","blendMode":0,"displayName":"default","isLocked":false,"name":"01344162-28c8-4f9a-818b-2ebbbb0803e8","opacity":40.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sToxicSpot",
   "nineSlice":null,

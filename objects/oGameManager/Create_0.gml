@@ -1,12 +1,25 @@
 global.minigames = ds_map_create()
 global.stopGameTime = false
 global.gameTime = 180 // 3 Minutes or something IDK
+global.interactableMap = ds_map_create()
 
 global.InsideMinigame = false
 
+// Minigame map
 ds_map_add(global.minigames, -69, Room1)
 function addGame(g_id, type) {
 	ds_map_add(global.minigames, g_id, type)	
+}
+
+// interactables Map
+function addInteractable(tag_id, obj_type) {
+	ds_map_add(global.interactableMap, tag_id, obj_type)
+}
+
+// Call Interactable
+function callInteract(tag_idd) {
+	var obj = ds_map_find_value(global.interactableMap, tag_idd)
+	obj.invoke()
 }
 
 

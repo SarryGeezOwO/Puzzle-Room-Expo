@@ -17,6 +17,8 @@
     {"name":"inst_2BB44727","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_1654FBD","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_49AFA132","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_703A84F7","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_26A2F740","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -53,7 +55,7 @@
           28,15,-7,-2147483648,13,18,29,28,29,28,29,28,29,21,20,67,6,7,-14,0,9,34,29,28,29,28,29,28,36,31,-7,-2147483648,
           8,18,37,36,37,36,37,36,37,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tsWallTiles","path":"tilesets/tsWallTiles/tsWallTiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRTileLayer":"","%Name":"ToxicSpot","depth":200,"effectEnabled":true,"effectType":"_filter_heathaze","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"ToxicSpot","properties":[
+    {"$GMRTileLayer":"","%Name":"Toxic_1","depth":200,"effectEnabled":true,"effectType":"_filter_heathaze","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Toxic_1","properties":[
         {"name":"g_Distort1Speed","type":0,"value":"0.004",},
         {"name":"g_Distort2Speed","type":0,"value":"0.005",},
         {"name":"g_Distort1Scale","type":0,"value":"6",},
@@ -77,7 +79,7 @@
           -67,8,-19,-2147483648,-67,8,1,3,-18,-2147483648,-68,8,-18,-2147483648,-72,8,-14,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tsToxicSpot","path":"tilesets/tsToxicSpot/tsToxicSpot.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Perlin","depth":300,"effectEnabled":true,"effectType":"_filter_heathaze","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_49AFA132","colour":855638015,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_49AFA132","objectId":{"name":"oPerlinWaves","path":"objects/oPerlinWaves/oPerlinWaves.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5833335,"scaleY":2.0,"x":0.0,"y":0.0,},
+        {"$GMRInstance":"v2","%Name":"inst_49AFA132","colour":520093695,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_49AFA132","objectId":{"name":"oPerlinWaves","path":"objects/oPerlinWaves/oPerlinWaves.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5833335,"scaleY":2.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Perlin","properties":[
         {"name":"g_Distort1Speed","type":0,"value":"0.01",},
         {"name":"g_Distort2Speed","type":0,"value":"0.039",},
@@ -93,6 +95,13 @@
       ],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_5CE51309","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5CE51309","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":320.0,},
+        {"$GMRInstance":"v2","%Name":"inst_703A84F7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_703A84F7","objectId":{"name":"oLever","path":"objects/oLever/oLever.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLever","path":"objects/oLever/oLever.yy",},"propertyId":{"name":"tag_id","path":"objects/oLever/oLever.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-90.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":352.0,},
+        {"$GMRInstance":"v2","%Name":"inst_26A2F740","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_26A2F740","objectId":{"name":"oToxicPipe","path":"objects/oToxicPipe/oToxicPipe.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oToxicPipe","path":"objects/oToxicPipe/oToxicPipe.yy",},"propertyId":{"name":"Tilemap_ID","path":"objects/oToxicPipe/oToxicPipe.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oToxicPipe","path":"objects/oToxicPipe/oToxicPipe.yy",},"propertyId":{"name":"tag_id","path":"objects/oToxicPipe/oToxicPipe.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-90.0,"scaleX":0.5,"scaleY":0.5,"x":64.0,"y":704.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"minigames","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_59B58C1A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_59B58C1A","objectId":{"name":"oMinigame","path":"objects/oMinigame/oMinigame.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":64.0,},
