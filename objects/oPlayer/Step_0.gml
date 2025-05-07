@@ -9,20 +9,31 @@ rawInput[0] = dKey - aKey;
 rawInput[1] = sKey - wKey;
 rawInput = normalize_vector(rawInput[0], rawInput[1])
 
-input[0] = lerp(input[0], rawInput[0], 0.2)
-input[1] = lerp(input[1], rawInput[1], 0.2)
+input[0] = lerp(input[0], rawInput[0], 0.125)
+input[1] = lerp(input[1], rawInput[1], 0.125)
+
+var diff = dot_product(prevInput[0], prevInput[1], input[0], input[1])
+if (diff < 0) {
+	// 90 deg
+    var cross = input[0] * prevInput[1] - input[1] * prevInput[0];
+    var perp = (cross > 0) ? [-input[1], input[0]] : [input[1], -input[0]];
+
+    var length = point_distance(0, 0, prevInput[0], prevInput[1]);
+    input = [perp[0] * length, perp[1] * length]; 
+}
 
 velX = input[0] * moveSpd
 velY = input[1] * moveSpd
+prevInput = rawInput
 
 // Horizontal Collision
-if position_meeting(x + (velX * 2), y, oTile) 
+if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) 
 {
 	velX = 0;
 }
 
 // Vertical Collision
-if position_meeting(x, y + (velY * 2), oTile) 
+if position_meeting(x, y + (velY * 2), layer_tilemap_get_id("SandTiles")) 
 {
 	velY = 0;
 }	
@@ -43,6 +54,9 @@ bodyPoints[0].by = y;
 for(var i = 1; i < array_length(bodyPoints); i++) {
 	var bp = bodyPoints[i];
 	var prev = bodyPoints[i-1];
+	
+	var vec = get_vector_normalized(bp.bx, bp.by, prev.bx, prev.by);
+	bp.a = unit_vector_to_degree(vec[0], vec[1])
 	
 	// Follow along
 	var dist = point_distance(bp.bx, bp.by, prev.bx, prev.by);
