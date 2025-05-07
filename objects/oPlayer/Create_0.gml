@@ -4,6 +4,8 @@ sKey = false
 dKey = false
 prevInput = [0, 0]
 maxTurnAngle = 90;
+inpTimer = 0;
+inpTimeBack = false
 
 //InteractKey
 isInteracting = false

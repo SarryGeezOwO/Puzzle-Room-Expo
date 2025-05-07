@@ -3,6 +3,13 @@ sKey = keyboard_check( ord("S") )
 aKey = keyboard_check( ord("A") )
 dKey = keyboard_check( ord("D") )
 
+var timeAmount = delta_time / 1000000
+inpTimer += (inpTimeBack) ? -timeAmount : timeAmount
+if (inpTimer >= 1) 
+	inpTimeBack = true
+else if (inpTimer <= -1)
+	inpTimeBack = false
+
 isInteracting = keyboard_check( vk_space )
 	
 rawInput[0] = dKey - aKey;
@@ -11,6 +18,13 @@ rawInput = normalize_vector(rawInput[0], rawInput[1])
 
 input[0] = lerp(input[0], rawInput[0], 0.125)
 input[1] = lerp(input[1], rawInput[1], 0.125)
+
+var amplitude = 1;
+var freq = 20;
+var offset = [
+	sin(inpTimer * freq) * -input[1] * amplitude,
+	sin(inpTimer * freq) * input[0] * amplitude
+]
 
 var diff = dot_product(prevInput[0], prevInput[1], input[0], input[1])
 if (diff < 0) {
@@ -22,8 +36,8 @@ if (diff < 0) {
     input = [perp[0] * length, perp[1] * length]; 
 }
 
-velX = input[0] * moveSpd
-velY = input[1] * moveSpd
+velX = offset[0] + input[0] * moveSpd
+velY = offset[1] + input[1] * moveSpd
 prevInput = rawInput
 
 // Horizontal Collision
@@ -62,8 +76,8 @@ for(var i = 1; i < array_length(bodyPoints); i++) {
 	var dist = point_distance(bp.bx, bp.by, prev.bx, prev.by);
 	var prevDir = get_vector_normalized(prev.bx, prev.by, bp.bx, bp.by)
 	if (dist >= prev.bd) {
-		bp.bx = prev.bx + (prevDir[0] * prev.bd);
-		bp.by = prev.by + (prevDir[1] * prev.bd);
+		bp.bx = (prev.bx + (prevDir[0] * prev.bd));
+		bp.by = (prev.by + (prevDir[1] * prev.bd));
 	}
 }
 
