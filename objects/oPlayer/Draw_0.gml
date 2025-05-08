@@ -56,7 +56,7 @@ draw_line_width(t.bx, t.by, endTail[0], endTail[1], 6)
 // --------------------------------
 
 // Draw bodypoints
-draw_set_colour(c_orange);
+draw_set_colour(fishCol);
 for (var i = array_length(bodyPoints)-1; i >= 0; i--) {
 	var body = bodyPoints[i];
 	draw_circle(body.bx, body.by, body.bw, drawOutline)	
@@ -67,7 +67,7 @@ endTail = scale_position_by_vector(endTailV, 10, [t.bx, t.by])
 draw_line_width(t.bx, t.by, endTail[0], endTail[1], 3)
 
 // Fins
-draw_set_colour(c_orange);
+draw_set_colour(fishCol);
 draw_circle(leftFin.bx, leftFin.by, leftFin.bw, drawOutline);
 draw_line_width(anchor.bx, anchor.by, leftFin.bx, leftFin.by, 4);
 
@@ -80,7 +80,7 @@ draw_circle(lowLeftFin.bx, lowLeftFin.by, lowLeftFin.bw, drawOutline);
 draw_circle(lowRightFin.bx, lowRightFin.by, lowRightFin.bw, drawOutline);
 
 // Stripes
-draw_set_colour(c_white);
+draw_set_colour(c_gray);
 for (var i = array_length(bodyPoints)-4; i > 0; i-=2) {
 	var body = bodyPoints[i];
 	var vec = degree_to_unit_vector(body.a);

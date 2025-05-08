@@ -41,6 +41,7 @@ lowLeftFin =  new bodyPoint(0, 0, 3, 5, -1)
 lowRightFin = new bodyPoint(0, 0, 3, 5, -1)
 
 drawOutline = false;
+fishCol = make_colour_rgb(237, 44, 40)
 
 bodyPoints = [
 	new bodyPoint(0, 0, 10, 10, -1),
