@@ -5,6 +5,9 @@ global.interactableMap = ds_map_create()
 
 global.InsideMinigame = false
 
+devices = [];
+hasController = false;
+
 // Minigame map
 ds_map_add(global.minigames, -69, Room1)
 function addGame(g_id, type) {

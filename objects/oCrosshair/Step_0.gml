@@ -1,10 +1,19 @@
-up_k = keyboard_check( ord("W") ) || keyboard_check( vk_up )
-down_k = keyboard_check( ord("S") ) || keyboard_check( vk_down )
-left_k = keyboard_check( ord("A") ) || keyboard_check( vk_left )
-right_k = keyboard_check( ord("D") ) || keyboard_check( vk_right )
+up_k = keyboard_check( ord("W") ) 
+down_k = keyboard_check( ord("S") ) 
+left_k = keyboard_check( ord("A") ) 
+right_k = keyboard_check( ord("D") ) 
 
 inp[0] = right_k - left_k;
 inp[1] = down_k - up_k;
+
+if (oGameManager.hasController) {
+	var dev = oGameManager.devices[0];
+	var lh = gamepad_axis_value(dev, gp_axislh)
+	var lv = gamepad_axis_value(dev, gp_axislv)
+	
+	inp[0] = abs(lh) > 0.5 ? 1 * sign(lh) : 0
+	inp[1] = abs(lv) > 0.5 ? 1 * sign(lv) : 0
+}
 
 inp = normalize_vector(inp[0], inp[1])
 vx = inp[0] * spd;

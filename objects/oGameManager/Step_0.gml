@@ -8,3 +8,5 @@ if (room == Room1 && loadPlayerPos) {
 	oPlayer.x = lastPlayerPos[0]
 	oPlayer.y = lastPlayerPos[1]
 }
+
+hasController = array_length(devices) > 0

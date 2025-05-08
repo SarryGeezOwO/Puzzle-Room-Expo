@@ -1,12 +1,3 @@
-draw_line(100, 50, 100, 150)
-draw_line(50, 100, 150, 100)
-
-draw_circle(100, 100, 50, true)
-draw_circle(100 + (input[0] * 50), 100 + (input[1] * 50), 20, false)
-
-draw_text(20, 170, "InputX: " + string(input[0]))
-draw_text(20, 186, "InputY: " + string(input[1]))
-
 // Draw step ahead
 draw_set_colour(c_yellow);
 draw_circle(
@@ -15,7 +6,7 @@ draw_circle(
 	2, true
 )
 
-// Hook gun
+// Vaccum gun
 draw_sprite_ext(
 	sVacum, -1, leftFin.bx, leftFin.by,
 	0.5, 0.5, unit_vector_to_degree(input[0], input[1]), c_white, 1
@@ -80,7 +71,7 @@ draw_circle(lowLeftFin.bx, lowLeftFin.by, lowLeftFin.bw, drawOutline);
 draw_circle(lowRightFin.bx, lowRightFin.by, lowRightFin.bw, drawOutline);
 
 // Stripes
-draw_set_colour(c_gray);
+draw_set_colour(stripeCol);
 for (var i = array_length(bodyPoints)-4; i > 0; i-=2) {
 	var body = bodyPoints[i];
 	var vec = degree_to_unit_vector(body.a);
@@ -96,5 +87,8 @@ for (var i = array_length(bodyPoints)-4; i > 0; i-=2) {
 draw_set_colour(c_black)
 draw_circle(leftEye.bx, leftEye.by, leftEye.bw, false);
 draw_circle(rightEye.bx, rightEye.by, rightEye.bw, false);
+
+
+// Vaccum Sucking Shader or something like that
 
 draw_set_colour(c_white);

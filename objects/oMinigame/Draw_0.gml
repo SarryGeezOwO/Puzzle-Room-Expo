@@ -11,7 +11,7 @@ draw_set_alpha(1)
 
 if interact_prog > 0 
 {	
-	draw_set_colour(c_yellow)
+	draw_set_colour(c_black)
 	draw_roundrect(
 		x - 50, (y + topOffset) - 15, 
 		(x - 50) + lerp(0, 2, interact_prog) * 50, y + topOffset, 

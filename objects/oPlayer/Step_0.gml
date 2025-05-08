@@ -1,21 +1,26 @@
+// Keyboard
 wKey = keyboard_check( ord("W") )
 sKey = keyboard_check( ord("S") )
 aKey = keyboard_check( ord("A") )
 dKey = keyboard_check( ord("D") )
-
-var timeAmount = delta_time / 1000000
-inpTimer += (inpTimeBack) ? -timeAmount : timeAmount
-if (inpTimer >= 1) 
-	inpTimeBack = true
-else if (inpTimer <= -1)
-	inpTimeBack = false
-
 isInteracting = keyboard_check( vk_space )
 	
 rawInput[0] = dKey - aKey;
 rawInput[1] = sKey - wKey;
-rawInput = normalize_vector(rawInput[0], rawInput[1])
 
+// Controller
+if (oGameManager.hasController) {
+	var dev = oGameManager.devices[0];
+	var lh = gamepad_axis_value(dev, gp_axislh)
+	var lv = gamepad_axis_value(dev, gp_axislv)
+	
+	rawInput[0] = abs(lh) > 0.5 ? 1 * sign(lh) : 0
+	rawInput[1] = abs(lv) > 0.5 ? 1 * sign(lv) : 0
+	isInteracting = gamepad_button_check(dev, gp_face1)
+}
+
+// Direction
+rawInput = normalize_vector(rawInput[0], rawInput[1])
 input[0] = lerp(input[0], rawInput[0], 0.125)
 input[1] = lerp(input[1], rawInput[1], 0.125)
 
