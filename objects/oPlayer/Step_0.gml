@@ -4,6 +4,7 @@ sKey = keyboard_check( ord("S") )
 aKey = keyboard_check( ord("A") )
 dKey = keyboard_check( ord("D") )
 isInteracting = keyboard_check( vk_space )
+isVaccuming = keyboard_check( ord("F") )
 	
 rawInput[0] = dKey - aKey;
 rawInput[1] = sKey - wKey;
@@ -16,7 +17,8 @@ if (oGameManager.hasController) {
 	
 	rawInput[0] = abs(lh) > 0.5 ? 1 * sign(lh) : 0
 	rawInput[1] = abs(lv) > 0.5 ? 1 * sign(lv) : 0
-	isInteracting = gamepad_button_check(dev, gp_face1)
+	isInteracting = gamepad_button_check(dev, gp_face1) // X
+	isVaccuming = gamepad_button_check(dev, gp_face2)   // O
 }
 
 // Direction
@@ -46,13 +48,13 @@ velY = offset[1] + input[1] * moveSpd
 prevInput = rawInput
 
 // Horizontal Collision
-if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) 
+if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) || (x + velX <= 0 || x+velX >= room_width)
 {
 	velX = 0;
 }
 
 // Vertical Collision
-if position_meeting(x, y + (velY * 2), layer_tilemap_get_id("SandTiles")) 
+if position_meeting(x, y + (velY * 2), layer_tilemap_get_id("SandTiles")) || (y + velY <= 0 || y+velY >= room_height)
 {
 	velY = 0;
 }	
@@ -60,10 +62,9 @@ if position_meeting(x, y + (velY * 2), layer_tilemap_get_id("SandTiles"))
 x += velX;
 y += velY;	
 
-
 if (input[0] != 0 || input[1] != 0) {
-	lookAheadPoint[0] = x + (input[0] * lookAheadStep)
-	lookAheadPoint[1] = y + (input[1] * lookAheadStep)	
+	lookAheadPoint = scale_vector_by_length(input, lookAheadStep)
+	lookDir = normalize_vector_arr(lookAheadPoint)
 }
 
 // Body movement
@@ -88,7 +89,7 @@ for(var i = 1; i < array_length(bodyPoints); i++) {
 
 // Eyes
 var eye = bodyPoints[eyeAnchor];
-var dir = get_vector_normalized(eye.bx, eye.by, lookAheadPoint[0], lookAheadPoint[1])
+var dir = lookDir
 var lEye =  perpendicular_cw(dir[0], dir[1]);
 var rEye = perpendicular_ccw(dir[0], dir[1]);
 	leftEye.bx =  eye.bx + (lEye[0] * leftEye.bd);
@@ -122,3 +123,37 @@ right = perpendicular_ccw(dir[0], dir[1]);
 	
 	lowRightFin.bx =  anchor.bx + (right[0] * lowRightFin.bd);
 	lowRightFin.by =  anchor.by + (right[1] * lowRightFin.bd);
+	
+// Vaccum ---------- 
+with(oTrash) {
+	// code here is being called by oTrash
+	// other refers to the calling code of "With"
+	// Comapare Dot product
+	
+	var trashVec = get_vector_normalized(other.x, other.y, x, y)
+	var dp = dot_product(other.lookDir[0], other.lookDir[1], trashVec[0], trashVec[1])
+	var dist = point_distance(other.x, other.y, x, y)
+	isVacRange = dp >= 0.85 && dist <= other.vaccumMaxRange
+	
+	if (isVacRange && other.isVaccuming) {
+		var nx = lerp(x, other.leftFin.bx, 0.1)
+		var ny = lerp(y, other.leftFin.by, 0.1)
+		
+		// Horizontal Collision
+		if position_meeting(nx, y, layer_tilemap_get_id("SandTiles")) {
+			nx = x;
+		}
+
+		// Vertical Collision
+		if position_meeting(x, ny, layer_tilemap_get_id("SandTiles")) {
+			ny = y;
+		}	
+		
+		x = nx;
+		y = ny;
+	
+		if (dist <= 35) {
+			instance_destroy()
+		}
+	}
+}

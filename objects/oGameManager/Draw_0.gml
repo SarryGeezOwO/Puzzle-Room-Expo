@@ -11,4 +11,18 @@ draw_set_font(f_default)
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-draw_text(10, 10, "Controller Detected " + string(devices))
+draw_set_color(c_black)
+draw_text(room_width- 180, 10, "Controller Detected " + string(devices))
+
+function draw_nth(text, order) {
+	if (room == Room1) {
+		draw_text(10, 19 * order, text)		
+	}
+}
+
+// Draw Tasks
+draw_nth("Task 1: Lorem lipsum sample", 1)
+draw_nth("Task 2: Lorem lipsum sample", 2)
+draw_nth("Task 3: Lorem lipsum sample", 3)
+draw_nth("Task 4: Lorem lipsum sample", 4)
+draw_set_color(c_white)

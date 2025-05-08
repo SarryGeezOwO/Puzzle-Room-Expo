@@ -11,11 +11,15 @@ inpTimeBack = false
 isInteracting = false
 mouseDown = false
 
+// Be ready to remove this shit
+isVaccuming = false
+vaccumMaxRange = 200
+
 rawInput = [0, 0]
 input = [0, 0]
 velX = 0
 velY = 0
-moveSpd = 5
+moveSpd = 4
 
 function bodyPoint(_x, _y, _w, _d, _a) constructor {
 	bx = _x;
@@ -25,8 +29,9 @@ function bodyPoint(_x, _y, _w, _d, _a) constructor {
 	a = _a;
 };
 
+lookDir = [0, 0] // Normalized version
 lookAheadPoint = [0, 0]
-lookAheadStep = 30
+lookAheadStep = 25
 
 eyeAnchor = 0;
 leftEye =  new bodyPoint(0, 0, 2, 6, -1)

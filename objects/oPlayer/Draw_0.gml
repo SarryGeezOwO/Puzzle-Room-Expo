@@ -1,10 +1,15 @@
 // Draw step ahead
+/*
 draw_set_colour(c_yellow);
 draw_circle(
-	lookAheadPoint[0],
-	lookAheadPoint[1],
+	x + lookAheadPoint[0],
+	y + lookAheadPoint[1],
 	2, true
 )
+*/
+
+// var scaledPos = scale_position_by_vector(lookDir, vaccumMaxRange, [x, y])
+// draw_line_width(x, y, scaledPos[0], scaledPos[1], 3)
 
 // Vaccum gun
 draw_sprite_ext(
@@ -90,5 +95,4 @@ draw_circle(rightEye.bx, rightEye.by, rightEye.bw, false);
 
 
 // Vaccum Sucking Shader or something like that
-
 draw_set_colour(c_white);

@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oTrash",
+  "%Name":"oVaccSuck",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTrash",
+  "name":"oVaccSuck",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"deco",
+    "path":"folders/Objects/deco.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sTrash",
-    "path":"sprites/sTrash/sTrash.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
