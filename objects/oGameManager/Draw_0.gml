@@ -21,8 +21,7 @@ function draw_nth(text, order) {
 }
 
 // Draw Tasks
-draw_nth("Task 1: Lorem lipsum sample", 1)
-draw_nth("Task 2: Lorem lipsum sample", 2)
-draw_nth("Task 3: Lorem lipsum sample", 3)
-draw_nth("Task 4: Lorem lipsum sample", 4)
+draw_nth("Tasks", 1);
+draw_nth("Task 1: Lorem lipsum sample", 2)
+draw_nth("Task 2: Lorem lipsum sample", 3)
 draw_set_color(c_white)

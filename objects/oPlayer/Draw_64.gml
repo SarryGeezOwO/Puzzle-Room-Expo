@@ -1,6 +1,6 @@
 if (global.isDebugMode) {
 	draw_set_color(c_black)
-	var offset = room_width - 160
+	var offset = room_width - 170
 
 	draw_line(offset + 100, 50, offset + 100, 150)
 	draw_line(offset + 50, 100, offset + 150, 100)
