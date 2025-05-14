@@ -29,6 +29,7 @@ function callInteract(tag_idd) {
 
 // Types are also based on sprite index
 addGame(0, r_lionHunt)
+addGame(1, r_trashSort)
 
 room_to_load = -1
 lastPlayerPos = [-1, -1]

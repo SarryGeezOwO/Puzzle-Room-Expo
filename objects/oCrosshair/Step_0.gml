@@ -19,8 +19,8 @@ inp = normalize_vector(inp[0], inp[1])
 vx = inp[0] * spd;
 vy = inp[1] * spd;
 
-x += vx;
-y += vy;
+if (x+vx < room_width && x+vx > 0) x += vx;
+if (y+vy < room_height && y+vy > 0) y += vy;	
 
 if (oGH_LionFishHunt.gameOver) {
 	instance_destroy(id, false)	
