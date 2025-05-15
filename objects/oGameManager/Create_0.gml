@@ -8,12 +8,21 @@ global.isDebugMode = true
 global.isMenuOpen = false
 global.menuOptions = ds_map_create() // index, Function
 
+// Settings shit (addd more to future if needed)
+global.audioMute = false
+global.gameFullScreen = false
+
+global.settingsOpen = false
 global.managerCount = 0;
 with(oGameManager) {
 	global.managerCount++;
 }
 
+// Load settings
+window_set_fullscreen(global.gameFullScreen)
+
 menuTimer = 0
+resetMenu = false
 uuid = irandom_range(0, 9999)
 if (global.managerCount == 1) { // there's only one manager
 	global.gameManagerUUID = uuid;	
@@ -86,7 +95,7 @@ function menu_resume() {
 }
 
 function menu_settings() {
-	
+	global.settingsOpen = true
 }
 
 function menu_exit() {
