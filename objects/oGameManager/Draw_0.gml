@@ -5,15 +5,15 @@ draw_set_font(f_big)
 var cx = room_width / 2
 
 draw_set_font(f_big)
+draw_set_color(c_black)
+
 draw_text(cx, 20, string(global.gameTime))
 
 draw_set_font(f_default)
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-draw_set_color(c_black)
 draw_text(room_width- 180, 10, "Controller Detected " + string(devices))
-
 function draw_nth(text, order) {
 	if (room == Room1) {
 		draw_text(10, 19 * order, text)		

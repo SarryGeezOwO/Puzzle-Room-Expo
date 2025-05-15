@@ -5,7 +5,7 @@ if prog <= 1.4
 		prog += delta_time / 1000000	
 }
 
-if prog >= 1.4
+if prog >= 1.2
 {
 	room_goto(ds_map_find_value(global.minigames, oGameManager.room_to_load))
 }

@@ -23,10 +23,12 @@
     {"name":"inst_47293DB0","path":"rooms/r_lionHunt/r_lionHunt.yy",},
     {"name":"inst_711E2C85","path":"rooms/r_lionHunt/r_lionHunt.yy",},
     {"name":"inst_756793C0","path":"rooms/r_lionHunt/r_lionHunt.yy",},
+    {"name":"inst_CBB1D04","path":"rooms/r_lionHunt/r_lionHunt.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_CBB1D04","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_CBB1D04","objectId":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v2","%Name":"inst_116245FF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_116245FF","objectId":{"name":"oLionFish","path":"objects/oLionFish/oLionFish.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":768.0,"y":64.0,},
         {"$GMRInstance":"v2","%Name":"inst_451DD65B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_451DD65B","objectId":{"name":"oLionFish","path":"objects/oLionFish/oLionFish.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1216.0,"y":288.0,},
         {"$GMRInstance":"v2","%Name":"inst_3CA3D1F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3CA3D1F9","objectId":{"name":"oLionFish","path":"objects/oLionFish/oLionFish.yy",},"properties":[

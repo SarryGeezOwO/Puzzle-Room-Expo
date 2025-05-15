@@ -55,6 +55,7 @@
     {"id":{"name":"oLever","path":"objects/oLever/oLever.yy",},},
     {"id":{"name":"oLionFish","path":"objects/oLionFish/oLionFish.yy",},},
     {"id":{"name":"oLoader","path":"objects/oLoader/oLoader.yy",},},
+    {"id":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},},
     {"id":{"name":"oMinigame","path":"objects/oMinigame/oMinigame.yy",},},
     {"id":{"name":"oNonBioTrash","path":"objects/oNonBioTrash/oNonBioTrash.yy",},},
     {"id":{"name":"oPerlinWaves","path":"objects/oPerlinWaves/oPerlinWaves.yy",},},

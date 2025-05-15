@@ -1,16 +1,18 @@
 // Keyboard
-wKey = keyboard_check( ord("W") )
-sKey = keyboard_check( ord("S") )
-aKey = keyboard_check( ord("A") )
-dKey = keyboard_check( ord("D") )
-isInteracting = keyboard_check( vk_space )
-isVaccuming = keyboard_check( ord("F") )
+if (!global.isMenuOpen) {
+	wKey = keyboard_check( ord("W") )
+	sKey = keyboard_check( ord("S") )
+	aKey = keyboard_check( ord("A") )
+	dKey = keyboard_check( ord("D") )
+	isInteracting = keyboard_check( vk_space )
+	isVaccuming = keyboard_check( ord("F") )	
+}
 	
 rawInput[0] = dKey - aKey;
 rawInput[1] = sKey - wKey;
 
 // Controller
-if (oGameManager.hasController) {
+if (oGameManager.hasController && !global.isMenuOpen) {
 	var dev = oGameManager.devices[0];
 	var lh = gamepad_axis_value(dev, gp_axislh)
 	var lv = gamepad_axis_value(dev, gp_axislv)
@@ -19,6 +21,13 @@ if (oGameManager.hasController) {
 	rawInput[1] = abs(lv) > 0.5 ? 1 * sign(lv) : 0
 	isInteracting = gamepad_button_check(dev, gp_face1) // X
 	isVaccuming = gamepad_button_check(dev, gp_face2)   // O
+}
+
+// Toggle off all input keys
+if (global.isMenuOpen) {
+	isVaccuming = false
+	isInteracting = false
+	rawInput = [0, 0]
 }
 
 // Direction

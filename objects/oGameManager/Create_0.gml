@@ -5,12 +5,15 @@ global.interactableMap = ds_map_create()
 
 global.InsideMinigame = false
 global.isDebugMode = true
+global.isMenuOpen = false
+global.menuOptions = ds_map_create() // index, Function
 
 global.managerCount = 0;
 with(oGameManager) {
 	global.managerCount++;
 }
 
+menuTimer = 0
 uuid = irandom_range(0, 9999)
 if (global.managerCount == 1) { // there's only one manager
 	global.gameManagerUUID = uuid;	
@@ -29,6 +32,17 @@ function addGame(g_id, type) {
 // interactables Map
 function addInteractable(tag_id, obj_type) {
 	ds_map_add(global.interactableMap, tag_id, obj_type)
+}
+
+// Menu function mapping
+function addMenuFunction(index, func) {
+	ds_map_add(global.menuOptions, index, func)
+}
+
+// Call Menu function
+function callMenuFunc(index) {
+	var func = ds_map_find_value(global.menuOptions, index)
+	func()
 }
 
 // Call Interactable
@@ -61,4 +75,20 @@ function goback_game()
 	global.InsideMinigame = false
 	global.stopGameTime = false
 	room_goto(r_loading)
+}
+
+addMenuFunction(0, menu_resume)
+addMenuFunction(1, menu_settings)
+addMenuFunction(2, menu_exit)
+
+function menu_resume() {
+	global.isMenuOpen = false	
+}
+
+function menu_settings() {
+	
+}
+
+function menu_exit() {
+	game_end()
 }

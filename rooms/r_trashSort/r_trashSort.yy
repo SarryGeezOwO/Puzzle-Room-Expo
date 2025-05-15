@@ -27,10 +27,12 @@
     {"name":"inst_72AE9A3E","path":"rooms/r_trashSort/r_trashSort.yy",},
     {"name":"inst_78E7BDBA","path":"rooms/r_trashSort/r_trashSort.yy",},
     {"name":"inst_7DF2C07C","path":"rooms/r_trashSort/r_trashSort.yy",},
+    {"name":"inst_29DC71B7","path":"rooms/r_trashSort/r_trashSort.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_29DC71B7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_29DC71B7","objectId":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
         {"$GMRInstance":"v2","%Name":"inst_7DF2C07C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DF2C07C","objectId":{"name":"oGH_TrashSort","path":"objects/oGH_TrashSort/oGH_TrashSort.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v2","%Name":"inst_F57E57C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_F57E57C","objectId":{"name":"oTrashbin","path":"objects/oTrashbin/oTrashbin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.7706308,"scaleY":1.75,"x":421.61258,"y":736.0,},
         {"$GMRInstance":"v2","%Name":"inst_11245356","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_11245356","objectId":{"name":"oTrashbin","path":"objects/oTrashbin/oTrashbin.yy",},"properties":[

@@ -39,7 +39,7 @@ with(all) {
 		continue
 	}
 	
-	if (point_distance(x, y, other.x, other.y) < 35 && !other.hasGrabbed) {
+	if (point_distance(x, y, other.x, other.y) < 42 && !other.hasGrabbed) {
 		other.hasGrabbed = true;
 		other.grabbedID = id
 	}
