@@ -75,7 +75,6 @@
     {"id":{"name":"SG","path":"scripts/SG/SG.yy",},},
     {"id":{"name":"Vectors","path":"scripts/Vectors/Vectors.yy",},},
     {"id":{"name":"shWater","path":"shaders/shWater/shWater.yy",},},
-    {"id":{"name":"sVacSuck","path":"shaders/sVacSuck/sVacSuck.yy",},},
     {"id":{"name":"sBioTrash","path":"sprites/sBioTrash/sBioTrash.yy",},},
     {"id":{"name":"SButton","path":"sprites/SButton/SButton.yy",},},
     {"id":{"name":"sCrosshair","path":"sprites/sCrosshair/sCrosshair.yy",},},
