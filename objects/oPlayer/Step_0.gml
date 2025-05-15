@@ -35,8 +35,8 @@ rawInput = normalize_vector(rawInput[0], rawInput[1])
 input[0] = lerp(input[0], rawInput[0], 0.125)
 input[1] = lerp(input[1], rawInput[1], 0.125)
 
-var amplitude = 1;
-var freq = 20;
+var amplitude = 1.25;
+var freq = 16;
 var offset = [
 	sin(inpTimer * freq) * -input[1] * amplitude,
 	sin(inpTimer * freq) * input[0] * amplitude
