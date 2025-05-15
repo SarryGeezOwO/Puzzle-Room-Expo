@@ -6,6 +6,17 @@ global.interactableMap = ds_map_create()
 global.InsideMinigame = false
 global.isDebugMode = true
 
+global.managerCount = 0;
+with(oGameManager) {
+	global.managerCount++;
+}
+
+uuid = irandom_range(0, 9999)
+if (global.managerCount == 1) { // there's only one manager
+	global.gameManagerUUID = uuid;	
+	global.hasGameManager = true;
+}
+
 devices = [];
 hasController = false;
 
