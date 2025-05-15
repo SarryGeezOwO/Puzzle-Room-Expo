@@ -18,7 +18,7 @@ if (gameOver) {
 	
 	draw_set_alpha(1)
 	draw_set_colour(c_white)
-	draw_roundrect(cx-150, cy-200, cx+150, cy+200, false)
+	draw_roundrect(cx-220, cy-200, cx+220, cy+200, false)
 	
 	draw_set_colour(c_black)
 	draw_text(cx, cy-34, "Minigame Finished!")
