@@ -26,11 +26,12 @@ if (res != 0) {
 
 // Sounds
 if (keyboard_check_pressed( vk_space )) {
-	audio_play_sound(sndMenuSelected, 1, false, 0.35, 0, 1.5)		
+	audio_play_sound(sndMenuSelected, 1, false, 0.35, 0, 1.5)
+	inputGoodToGo = true
 }
 
-if (keyboard_check_released( vk_space )) {
-	audio_play_sound(sndMenuSelected, 1, false)	
+if (keyboard_check_released( vk_space ) && inputGoodToGo) {
+	audio_play_sound(sndMenuSelected, 1, false)
 }
 
 // Tag checking

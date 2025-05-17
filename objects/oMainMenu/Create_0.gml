@@ -5,3 +5,5 @@ offset = 0
 
 selectedTag = 0
 tooltip = "..."
+
+inputGoodToGo = false

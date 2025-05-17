@@ -7,7 +7,9 @@ var cx = room_width / 2
 draw_set_font(f_big)
 draw_set_color(c_black)
 
-draw_text(cx, 20, string(global.gameTime))
+if (!isMainMenu) {
+	draw_text(cx, 20, string(global.gameTime))
+}
 
 draw_set_font(f_default)
 draw_set_halign(fa_left)

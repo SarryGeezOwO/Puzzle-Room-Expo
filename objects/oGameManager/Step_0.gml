@@ -10,13 +10,16 @@ else {
 	}
 }
 
-// Determine Audio
+// Determine settings
 audio_master_gain(!global.audioMute)
-
 window_set_fullscreen(global.gameFullScreen)
 hasController = array_length(devices) > 0
 
-if (!global.stopGameTime) {
+// Determine inputs
+isMainMenu = room == r_MainMenu
+
+// Don't advance on StopTime or MainMenu is the current room
+if (!global.stopGameTime && !isMainMenu) {
 	global.gameTime -= delta_time / 1000000	
 }
 
@@ -30,8 +33,10 @@ if (hasController) {
 
 // toggable only when outside of settings and HTP
 if menuBtn && menuTimer > 0.35 && !global.settingsOpen && !global.htpOpened {
-	global.isMenuOpen = !global.isMenuOpen
-	menuTimer = 0
+	if (!isMainMenu) {
+		global.isMenuOpen = !global.isMenuOpen
+		menuTimer = 0	
+	}
 }
 
 // Enable Menu

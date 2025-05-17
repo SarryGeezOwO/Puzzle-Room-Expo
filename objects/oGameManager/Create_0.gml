@@ -1,18 +1,20 @@
+// Maps / Dictionaries
+global.menuOptions = ds_map_create() // index, Function
+global.HTP_Names = ds_map_create() // index, Name
 global.minigames = ds_map_create()
-global.stopGameTime = false
-global.gameTime = 180 // 3 Minutes or something IDK
 global.interactableMap = ds_map_create()
 
+global.gameTime = 180 // 3 Minutes or something IDK
+global.stopGameTime = false
 global.InsideMinigame = false
 global.isDebugMode = true
 global.isMenuOpen = false
-global.menuOptions = ds_map_create() // index, Function
-global.HTP_Names = ds_map_create() // index, Name
 
 // Settings shit (addd more to future if needed)
 global.audioMute = false
 global.gameFullScreen = false
 
+global.htpSelected = 0
 global.htpOpened = false
 global.settingsOpen = false
 global.managerCount = 0;
@@ -33,16 +35,23 @@ if (global.managerCount == 1) { // there's only one manager
 
 devices = [];
 hasController = false;
+isMainMenu = room == r_MainMenu 
+
+// interactables Map 
+function addInteractable(tag_id, obj_type) {
+	ds_map_add(global.interactableMap, tag_id, obj_type)
+}
+
+// Call Interactable
+function callInteract(tag_idd) {
+	var obj = ds_map_find_value(global.interactableMap, tag_idd)
+	obj.invoke()
+}
 
 // Minigame map
 ds_map_add(global.minigames, -69, r_Overworld)
 function addGame(g_id, type) {
 	ds_map_add(global.minigames, g_id, type)	
-}
-
-// interactables Map
-function addInteractable(tag_id, obj_type) {
-	ds_map_add(global.interactableMap, tag_id, obj_type)
 }
 
 // Menu function mapping
@@ -54,12 +63,6 @@ function addMenuFunction(index, func) {
 function callMenuFunc(index) {
 	var func = ds_map_find_value(global.menuOptions, index)
 	func()
-}
-
-// Call Interactable
-function callInteract(tag_idd) {
-	var obj = ds_map_find_value(global.interactableMap, tag_idd)
-	obj.invoke()
 }
 
 // HTP function mapping
@@ -119,5 +122,15 @@ function menu_settings() {
 }
 
 function menu_exit() {
-	game_end()
+	room_goto(r_MainMenu)
+	oGameManager.room_to_load = -1
+	oGameManager.lastPlayerPos = [-1, -1]
+	oGameManager.loadPlayerPos = false
+	global.gameTime = 180 // 3 Minutes or something IDK
+	global.stopGameTime = false
+	global.InsideMinigame = false
+	global.isMenuOpen = false
+	global.htpOpened = false
+	global.settingsOpen = false
+	ds_map_clear(global.interactableMap)
 }

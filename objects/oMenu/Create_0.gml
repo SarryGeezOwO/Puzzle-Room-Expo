@@ -9,10 +9,9 @@ cy = (room_height / 2) - 70
 
 // This is the order duh
 htpTextOffset = 320
-htpTextMax = 600
+htpTextMax = 620
 htpTime = 0
 htpTimeForward = true
-htpSelected = 0
 htpImages = [HTP_Movement, HTP_Interactable, HTP_Minigame]
 htpCount = array_length(htpImages)
 // How to play will only cover the overworld controls, minigames are shown for the first time 

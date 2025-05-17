@@ -9,7 +9,6 @@
     {"name":"inst_5CE51309","path":"rooms/r_Overworld/r_Overworld.yy",},
     {"name":"inst_59B58C1A","path":"rooms/r_Overworld/r_Overworld.yy",},
     {"name":"inst_2BB44727","path":"rooms/r_Overworld/r_Overworld.yy",},
-    {"name":"inst_1654FBD","path":"rooms/r_Overworld/r_Overworld.yy",},
     {"name":"inst_49AFA132","path":"rooms/r_Overworld/r_Overworld.yy",},
     {"name":"inst_703A84F7","path":"rooms/r_Overworld/r_Overworld.yy",},
     {"name":"inst_26A2F740","path":"rooms/r_Overworld/r_Overworld.yy",},
@@ -24,7 +23,6 @@
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Persist","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_1654FBD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1654FBD","objectId":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v2","%Name":"inst_6517047E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6517047E","objectId":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
       ],"layers":[],"name":"Persist","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"HTP","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"HTP","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
@@ -136,8 +134,8 @@
   ],
   "name":"r_Overworld",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"World",
+    "path":"folders/Rooms/World.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

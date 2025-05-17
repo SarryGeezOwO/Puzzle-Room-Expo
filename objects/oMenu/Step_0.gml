@@ -54,12 +54,14 @@ if (press) {
 				selectedIndex = 0
 				global.htpOpened = false
 			}
-			else htpSelected = selectedIndex
+			else global.htpSelected = selectedIndex
 		}
 		else if (!global.settingsOpen) {
 			// Menu
 			oGameManager.callMenuFunc(selectedIndex)
-			selectedIndex = 0
+			if (selectedIndex != 1) { // Except How to play
+				selectedIndex = 0	
+			}else selectedIndex = global.htpSelected
 		}
 		else {
 			// Settings

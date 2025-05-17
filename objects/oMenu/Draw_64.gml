@@ -7,12 +7,12 @@ function draw_str(text, order) {
 
 function drawHTP(index) {
 	var n = oGameManager.getHTPName(index)
-	var t = (htpSelected == index) ? ">> " + n : n
-	draw_text(htpTextOffset, 120 + ((index+1) * 30), t)
+	var t = (global.htpSelected == index) ? ">> " + n : n
+	draw_text(htpTextOffset, 120 + ((index+1) * 32), t)
 }
 
 function boolStr(value) {
-	return (value) ? "On" : "Off"
+	return (value) ? " On" : "Off"
 }
 
 draw_set_font(f_big)
@@ -29,9 +29,9 @@ else headText = "Game Paused"
 if (global.htpOpened) {
 	// How to play
 	image_speed = 0.25
-	draw_sprite(htpImages[htpSelected], -1, cx+150, (cy+80) + sin(htpTime) * 7)
+	draw_sprite(htpImages[global.htpSelected], -1, cx+150, (cy+80) + sin(htpTime) * 7)
 	
-	var diff = (selectedIndex == htpCount) ? 34 : 30
+	var diff = (selectedIndex == htpCount) ? 34 : 32
 	var lineOff = 120 + ((selectedIndex+1) * diff)
 	draw_set_colour(selectCol)
 	draw_roundrect_ext(htpTextOffset-20, lineOff-15, htpTextMax, lineOff+15, 10, 10, false)
