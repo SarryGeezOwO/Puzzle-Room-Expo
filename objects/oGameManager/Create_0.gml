@@ -7,11 +7,13 @@ global.InsideMinigame = false
 global.isDebugMode = true
 global.isMenuOpen = false
 global.menuOptions = ds_map_create() // index, Function
+global.HTP_Names = ds_map_create() // index, Name
 
 // Settings shit (addd more to future if needed)
 global.audioMute = false
 global.gameFullScreen = false
 
+global.htpOpened = false
 global.settingsOpen = false
 global.managerCount = 0;
 with(oGameManager) {
@@ -60,6 +62,19 @@ function callInteract(tag_idd) {
 	obj.invoke()
 }
 
+// HTP function mapping
+function addHTPName(index, name) {
+	ds_map_add(global.HTP_Names, index, name)
+}
+
+// Get HTP Name
+function getHTPName(index) {
+	return ds_map_find_value(global.HTP_Names, index)
+}
+
+addHTPName(0, "Player Movement")
+addHTPName(1, "Interactable Objects")
+addHTPName(2, "Minigames")
 
 // Types are also based on sprite index
 addGame(0, r_lionHunt)
@@ -87,11 +102,16 @@ function goback_game()
 }
 
 addMenuFunction(0, menu_resume)
-addMenuFunction(1, menu_settings)
-addMenuFunction(2, menu_exit)
+addMenuFunction(1, menu_HTP)
+addMenuFunction(2, menu_settings)
+addMenuFunction(3, menu_exit)
 
 function menu_resume() {
 	global.isMenuOpen = false	
+}
+
+function menu_HTP() {
+	global.htpOpened = true
 }
 
 function menu_settings() {

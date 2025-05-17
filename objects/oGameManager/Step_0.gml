@@ -10,6 +10,9 @@ else {
 	}
 }
 
+// Determine Audio
+audio_master_gain(!global.audioMute)
+
 window_set_fullscreen(global.gameFullScreen)
 hasController = array_length(devices) > 0
 
@@ -25,8 +28,8 @@ if (hasController) {
 	menuBtn = gamepad_button_check(devices[0], gp_start)
 }
 
-// toggable only when outside of settings
-if menuBtn && menuTimer > 0.35 && !global.settingsOpen {
+// toggable only when outside of settings and HTP
+if menuBtn && menuTimer > 0.35 && !global.settingsOpen && !global.htpOpened {
 	global.isMenuOpen = !global.isMenuOpen
 	menuTimer = 0
 }

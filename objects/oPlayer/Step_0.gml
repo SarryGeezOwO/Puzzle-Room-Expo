@@ -161,7 +161,7 @@ with(oTrash) {
 		x = nx;
 		y = ny;
 	
-		if (dist <= 35) {
+		if (dist <= 50) {
 			instance_destroy()
 		}
 	}
