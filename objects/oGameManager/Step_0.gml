@@ -53,7 +53,7 @@ if (object_exists(oMenu)) {
 	}
 }
 
-if (room == Room1 && loadPlayerPos) {
+if (room == r_Overworld && loadPlayerPos) {
 	loadPlayerPos = false
 	oPlayer.x = lastPlayerPos[0]
 	oPlayer.y = lastPlayerPos[1]

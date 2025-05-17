@@ -35,7 +35,7 @@ devices = [];
 hasController = false;
 
 // Minigame map
-ds_map_add(global.minigames, -69, Room1)
+ds_map_add(global.minigames, -69, r_Overworld)
 function addGame(g_id, type) {
 	ds_map_add(global.minigames, g_id, type)	
 }
