@@ -1,3 +1,4 @@
+image_speed = 0.4
 // Vaccum effect
 if (oPlayer.isVaccuming) {
 	var scale = oPlayer.vaccumMaxRange / 64 // sprite size
