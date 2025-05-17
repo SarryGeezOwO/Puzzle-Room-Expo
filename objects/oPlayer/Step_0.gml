@@ -163,7 +163,7 @@ with(oTrash) {
 	
 		if (dist <= 50) {
 			var snd = irandom_range(0, 1) = 0 ? sndCollect_1 : sndCollect_2
-			audio_play_sound(snd, 1, false, 0.5)
+			audio_play_sound(snd, 1, false, 0.3, 0.3)
 			instance_destroy()
 		}
 	}
