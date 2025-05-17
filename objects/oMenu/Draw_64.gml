@@ -28,8 +28,12 @@ else headText = "Game Paused"
 
 if (global.htpOpened) {
 	// How to play
-	image_speed = 0.25
-	draw_sprite(htpImages[global.htpSelected], -1, cx+150, (cy+80) + sin(htpTime) * 7)
+	draw_sprite(
+		global.htpImages[global.htpSelected], htpCurrentFrame, cx+150, (cy+80) + sin(htpTime) * 7)
+	if (htpFrameTimer >= 3) {
+		htpCurrentFrame++
+		htpFrameTimer = 0
+	}else htpFrameTimer++
 	
 	var diff = (selectedIndex == htpCount) ? 34 : 32
 	var lineOff = 120 + ((selectedIndex+1) * diff)

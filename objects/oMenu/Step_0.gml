@@ -50,6 +50,7 @@ if (press) {
 	if (object_exists(oGameManager)) {
 		if (global.htpOpened) {
 			// How to play
+			htpCurrentFrame = 0
 			if (selectedIndex == htpCount) {
 				selectedIndex = 0
 				global.htpOpened = false

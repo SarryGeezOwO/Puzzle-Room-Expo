@@ -18,6 +18,7 @@ global.htpSelected = 0
 global.htpOpened = false
 global.settingsOpen = false
 global.managerCount = 0;
+if (!variable_global_exists("htpImages")) global.htpImages = [HTP_Movement, HTP_Interactable, HTP_Minigame]
 with(oGameManager) {
 	global.managerCount++;
 }

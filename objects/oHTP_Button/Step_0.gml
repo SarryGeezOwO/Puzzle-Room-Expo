@@ -5,3 +5,9 @@ var curLayer = layer_get_name(layer)
 if (curLayer != "Selected" || !oMainMenu.inputGoodToGo) {
 	isPressed = false
 }
+
+// Activate
+if (keyboard_check_released( vk_space ) && curLayer == "Selected" && oMainMenu.inputGoodToGo) {
+	oMainMenu.isHTPOpen = !oMainMenu.isHTPOpen
+	oMainMenu.selectedIndex = global.htpSelected
+}
