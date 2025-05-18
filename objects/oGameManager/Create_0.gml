@@ -3,12 +3,15 @@ global.menuOptions = ds_map_create() // index, Function
 global.HTP_Names = ds_map_create() // index, Name
 global.minigames = ds_map_create()
 global.interactableMap = ds_map_create()
+global.inventoryMap = ds_map_create() // Item_ID, Quantity
 
+global.fragmentsCollected = 0
 global.gameTime = 180 // 3 Minutes or something IDK
 global.stopGameTime = false
 global.InsideMinigame = false
 global.isDebugMode = false
 global.isMenuOpen = false
+global.isInventoryOpen = false
 
 // Settings shit (addd more to future if needed)
 global.audioMute = false
@@ -44,6 +47,22 @@ function addInteractable(tag_id, obj_type) {
 function callInteract(tag_idd) {
 	var obj = ds_map_find_value(global.interactableMap, tag_idd)
 	obj.invoke()
+}
+
+// Inventory Map
+function addItemInventory(item_ID, appendCount) {
+	if (ds_map_exists(global.inventoryMap, item_ID)) {
+		var oldCount = ds_map_find_value(global.inventoryMap, item_ID)
+		ds_map_replace(global.inventoryMap, item_ID, oldCount + appendCount)
+	}
+	else {
+		ds_map_add(global.inventoryMap, item_ID, appendCount)	
+	}
+}
+
+// get Item on Inventory
+function getItemCountInventory(item_ID) {
+	return ds_map_find_value(global.inventoryMap, item_ID)	
 }
 
 // Minigame map

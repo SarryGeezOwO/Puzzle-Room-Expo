@@ -14,7 +14,9 @@ if (global.isDebugMode) {
 draw_set_font(f_small)
 draw_set_valign(fa_middle)
 draw_tooltip_control(
-	38, ROOM_HEIGHT-25, 100, oGameManager.hasController, CTR_ESC_OPTIONS, "Pause")
+	38, ROOM_HEIGHT-65, 100, oGameManager.hasController, CTR_ESC_OPTIONS, "Pause")
+draw_tooltip_control(
+	38, ROOM_HEIGHT-25, 210, oGameManager.hasController, CTR_TAB_TRIANGLE, "Open/Close Inventory")
 
 draw_set_font(f_default)
 draw_set_valign(fa_top)

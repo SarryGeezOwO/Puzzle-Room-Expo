@@ -3,6 +3,13 @@ if (!global.stopGameTime && !isMainMenu) {
 	global.gameTime -= delta_time / 1000000	
 }
 
+// Toggle Inventory
+var tabKey = keyboard_check_pressed( vk_tab )
+if (hasController) {
+	tabKey = gamepad_button_check_pressed(devices[0], gp_face4)
+}
+if (tabKey) global.isInventoryOpen = !global.isInventoryOpen 
+
 
 // Toggle menu
 menuTimer += delta_time / 1000000

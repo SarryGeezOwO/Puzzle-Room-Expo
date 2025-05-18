@@ -57,6 +57,9 @@ velY = offset[1] + input[1] * moveSpd
 prevInput = rawInput
 
 // Horizontal Collision
+var collisions = []
+
+
 if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) || (x + velX <= 0 || x+velX >= room_width)
 {
 	velX = 0;
@@ -165,6 +168,7 @@ with(oTrash) {
 			var snd = irandom_range(0, 1) = 0 ? sndCollect_1 : sndCollect_2
 			audio_play_sound(snd, 1, false, 0.3)
 			instance_destroy()
+			oGameManager.addItemInventory(ITEM_ID_TRASH, 1)
 		}
 	}
 }

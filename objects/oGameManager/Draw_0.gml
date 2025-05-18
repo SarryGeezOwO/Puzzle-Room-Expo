@@ -21,12 +21,14 @@ function draw_nth(text, order) {
 	var cx = getCamX()
 	var cy = getCamY()
 	if (room == r_Overworld) {
-		draw_text(cx + 20, cy + (20 * order), text)		
+		draw_text(cx + 20, cy + (21 * order), text)		
 	}
 }
 
 // Draw Tasks
-draw_nth("GameManagers" + string(global.managerCount), 1);
+draw_set_font(f_small)
+draw_nth("Fragments Collected: " + string(global.fragmentsCollected), 1);
 draw_nth("GameManagers UUID" + string(global.gameManagerUUID), 2)
 draw_nth("Task 2: Lorem lipsum sample", 3)
+draw_set_font(f_default)
 draw_set_color(c_white)

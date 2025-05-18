@@ -2,12 +2,15 @@
 #macro CTR_SPACE_CROSS	0 
 #macro CTR_F_CIRCLE		1
 #macro CTR_E_SQUARE		2
-#macro CTR_R_TRIANGLE	3
+#macro CTR_TAB_TRIANGLE	3
 #macro CTR_ESC_OPTIONS	4
 #macro CTR_A_LEFT		5
 #macro CTR_S_DOWN		6
 #macro CTR_D_RIGHT		7
 #macro CTR_W_UP			8
+
+// Items
+#macro ITEM_ID_TRASH	0
 
 #macro ROOM_WIDTH 1366
 #macro ROOM_HEIGHT 768
