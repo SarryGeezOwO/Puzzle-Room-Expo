@@ -5,12 +5,14 @@ depth = -10
 
 var cx = getCamX() + (ROOM_WIDTH / 2)
 var cy = getCamY()
-
+ 
 draw_set_font(f_big)
 draw_set_color(c_black)
 
 if (!isMainMenu) {
-	draw_text(cx, cy + 20, string(global.gameTime))
+	var m = floor(global.gameTime / 60)
+	var s = floor(global.gameTime % 60)
+	draw_text(cx, cy + 20, string(m)+":"+string(s))
 }
 
 draw_set_font(f_default)
