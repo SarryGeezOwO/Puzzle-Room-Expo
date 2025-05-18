@@ -3,9 +3,10 @@
   "%Name":"tsWallTiles",
   "autoTileSets":[],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":9,
+    "SerialiseWidth":9,
+    "TileCompressedData":[-12,0,4,2,0,0,7,-5,0,4,42,0,0,47,-15,0,1,4,-8,0,1,44,-31,0,],
+    "TileDataFormat":1,
   },
   "name":"tsWallTiles",
   "out_columns":8,
