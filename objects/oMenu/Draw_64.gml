@@ -83,7 +83,7 @@ else {
 // Draw Controls 
 draw_set_halign(fa_left)
 draw_set_font(f_small)
-var botm = room_height - 25
+var botm = ROOM_HEIGHT - 25
 var tto = 40
 var isPS = oGameManager.hasController
 

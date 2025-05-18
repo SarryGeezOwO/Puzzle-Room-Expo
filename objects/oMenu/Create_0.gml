@@ -4,8 +4,8 @@ settingCount = 4; // How many buttons including apply and cancel
 inpUpTime = 0.125
 
 offset = 45
-cx = room_width / 2
-cy = (room_height / 2) - 70
+cx = ROOM_WIDTH / 2
+cy = (ROOM_HEIGHT / 2) - 70
 
 // This is the order duh
 htpCurrentFrame = 0

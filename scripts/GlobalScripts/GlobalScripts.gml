@@ -9,6 +9,16 @@
 #macro CTR_D_RIGHT		7
 #macro CTR_W_UP			8
 
+#macro ROOM_WIDTH 1366
+#macro ROOM_HEIGHT 768
+
+function getCamX() {
+	return camera_get_view_x(view_get_camera(0))	
+}
+
+function getCamY() {
+	return camera_get_view_y(view_get_camera(0))	
+}
 
 function draw_controls(cx, cy, isController, ctrl_id) {
 	draw_sprite_ext(
