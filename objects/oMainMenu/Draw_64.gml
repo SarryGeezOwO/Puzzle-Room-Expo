@@ -85,6 +85,3 @@ draw_tooltip_control(156,botm,        100, isPS, CTR_SPACE_CROSS, "Confirm")
 
 draw_set_font(f_default)
 draw_set_valign(fa_top)
-
-draw_set_font(f_default)
-draw_set_valign(fa_top)

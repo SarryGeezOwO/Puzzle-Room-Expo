@@ -29,4 +29,7 @@ function draw_tooltip_control(cx, cy, w, isController, ctrl_id, text) {
 	draw_sprite_ext((isController ? sPS_Button : sKey_Button), 
 		ctrl_id, cx, cy, 0.5, 0.5, 0, c_white, 1)
 	draw_text(cx + size, cy, text)
+	
+	// reset to Default
+	draw_set_colour(c_white)
 }

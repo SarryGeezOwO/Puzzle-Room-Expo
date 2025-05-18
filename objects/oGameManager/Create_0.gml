@@ -7,7 +7,7 @@ global.interactableMap = ds_map_create()
 global.gameTime = 180 // 3 Minutes or something IDK
 global.stopGameTime = false
 global.InsideMinigame = false
-global.isDebugMode = true
+global.isDebugMode = false
 global.isMenuOpen = false
 
 // Settings shit (addd more to future if needed)

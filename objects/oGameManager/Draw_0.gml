@@ -15,7 +15,6 @@ draw_set_font(f_default)
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-draw_text(room_width- 180, 10, "Controller Detected " + string(devices))
 function draw_nth(text, order) {
 	if (room == r_Overworld) {
 		draw_text(10, 19 * order, text)		
