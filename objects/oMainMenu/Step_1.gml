@@ -9,12 +9,22 @@ if (object_exists(oDisplay)) {
 	oDisplay.offset = offset
 }
 
+var rel = keyboard_check_released( vk_space )
+var press = keyboard_check_pressed( vk_space )
+if (oGameManager.hasController) {
+	var dev = oGameManager.devices[0]
+	rel = gamepad_button_check_released(dev, gp_face1) // X
+	press = gamepad_button_check_pressed(dev, gp_face1)
+}
+
+
 // Sounds, And Input validation
-if (keyboard_check_pressed( vk_space )) {
+if (press) {
 	audio_play_sound(sndMenuSelected, 1, false, 0.35, 0, 1.5)
 	inputGoodToGo = true
 }
-if (keyboard_check_released( vk_space ) && inputGoodToGo) {
+
+if (rel && inputGoodToGo) {
 	audio_play_sound(sndMenuSelected, 1, false)
 }
 
@@ -22,6 +32,11 @@ if (keyboard_check_released( vk_space ) && inputGoodToGo) {
 // Navigation
 var lkey = keyboard_check_pressed( ord("A") )
 var rkey = keyboard_check_pressed( ord("D") )
+if (oGameManager.hasController) {
+	var dev = oGameManager.devices[0]
+	lkey = gamepad_button_check_pressed(dev, gp_padl) // Left
+	rkey = gamepad_button_check_pressed(dev, gp_padr) // Right
+}
 
 var res = rkey - lkey
 var limitTag = 3 // +1

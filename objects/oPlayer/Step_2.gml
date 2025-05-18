@@ -1,7 +1,7 @@
 if (isVaccuming) {
 	audio_sound_gain(sndVaccum, 1, 1)
 	if (!audio_is_playing(sndVaccum)) {
-		audio_play_sound(sndVaccum, 1, true, 0.75, 0.2)	
+		audio_play_sound(sndVaccum, 1, true, 0.5, 0.2)	
 	}
 }
 else {

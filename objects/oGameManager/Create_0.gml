@@ -23,9 +23,6 @@ with(oGameManager) {
 	global.managerCount++;
 }
 
-// Load settings
-window_set_fullscreen(global.gameFullScreen)
-
 menuTimer = 0
 resetMenu = false
 uuid = irandom_range(0, 9999)
