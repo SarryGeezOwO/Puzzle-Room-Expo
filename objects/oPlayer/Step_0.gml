@@ -58,15 +58,23 @@ prevInput = rawInput
 
 // Horizontal Collision
 var collisions = []
+var layers = layer_get_all()
+var colI = 0
+for (var i = 0; i < array_length(layers); i++) {
+	var name = layer_get_name(layers[i])
+	if (string_starts_with(name, "Toxic")) {
+		collisions[colI] = layer_tilemap_get_id(name)
+		colI++
+	}
+}
 
-
-if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) || (x + velX <= 0 || x+velX >= room_width)
+if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) || position_meeting(x + (velX * 2), y, collisions) || (x + velX <= 0 || x+velX >= room_width)
 {
 	velX = 0;
 }
 
 // Vertical Collision
-if position_meeting(x, y + (velY * 2), layer_tilemap_get_id("SandTiles")) || (y + velY <= 0 || y+velY >= room_height)
+if position_meeting(x, y + (velY * 2), layer_tilemap_get_id("SandTiles")) || position_meeting(x, y + (velY * 2), collisions) || (y + velY <= 0 || y+velY >= room_height)
 {
 	velY = 0;
 }	
