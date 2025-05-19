@@ -56,7 +56,7 @@
     {"id":{"name":"f_small","path":"fonts/f_small/f_small.yy",},},
     {"id":{"name":"Copyrights","path":"notes/Copyrights/Copyrights.yy",},},
     {"id":{"name":"Minigames","path":"notes/Minigames/Minigames.yy",},},
-    {"id":{"name":"TODO controllers","path":"notes/TODO controllers/TODO controllers.yy",},},
+    {"id":{"name":"TODO","path":"notes/TODO/TODO.yy",},},
     {"id":{"name":"oBioTrash","path":"objects/oBioTrash/oBioTrash.yy",},},
     {"id":{"name":"oCameraZone","path":"objects/oCameraZone/oCameraZone.yy",},},
     {"id":{"name":"oCrosshair","path":"objects/oCrosshair/oCrosshair.yy",},},

@@ -1,7 +1,7 @@
 {
   "$GMNotes":"",
-  "%Name":"TODO controllers",
-  "name":"TODO controllers",
+  "%Name":"TODO",
+  "name":"TODO",
   "parent":{
     "name":"Notes",
     "path":"folders/Notes.yy",
