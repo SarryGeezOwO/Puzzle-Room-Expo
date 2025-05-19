@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sError",
-    "path":"sprites/sError/sError.yy",
+    "name":"sFishHook",
+    "path":"sprites/sFishHook/sFishHook.yy",
   },
   "spriteMaskId":null,
   "visible":true,

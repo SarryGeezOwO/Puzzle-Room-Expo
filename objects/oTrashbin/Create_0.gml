@@ -17,7 +17,7 @@ function processTrash(type) {
 	}
 	
 	if (isCorrect) {
-		oMG_EndUI.gameScore++;
+		oMG_EndUI.gameScore += 100;
 	}
 	
 	assTimer = 0.6;

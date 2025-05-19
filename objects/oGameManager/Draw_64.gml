@@ -1,6 +1,5 @@
-var isInv = false
-// Inventory
 
+// Inventory
 draw_set_font(f_small)
 if (!global.isMenuOpen && room == global.baseRoom && global.isInventoryOpen) {
 	draw_set_colour(make_colour_rgb(25, 25, 25))
@@ -9,7 +8,6 @@ if (!global.isMenuOpen && room == global.baseRoom && global.isInventoryOpen) {
 	draw_set_colour(make_colour_rgb(255, 136, 0))
 	draw_line_width(ROOM_WIDTH-130, 80, ROOM_WIDTH-10, 80, 10)
 	draw_sprite_ext(sBag, 0, ROOM_WIDTH-65, 80, 0.75, 0.75, 0, c_white, 1)
-	isInv = true // !!!!
 
 	draw_set_colour(c_white)
 	var arr = ds_map_keys_to_array(global.inventoryMap);

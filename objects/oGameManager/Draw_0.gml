@@ -14,6 +14,12 @@ if (!isMainMenu && !global.InsideMinigame) {
 	var m = floor(global.gameTime / 60)
 	var s = floor(global.gameTime % 60)	
 	draw_text(cx, cy + 25, time_format(m, s))
+	
+	// Just below the game time honestly
+	draw_set_font(f_HTP)
+	draw_text(cx, cy + 60, "SCORE")
+	draw_set_font(f_big)
+	draw_text(cx, cy + 85, string(global.gameTrueScore))
 }
 
 draw_set_font(f_default)

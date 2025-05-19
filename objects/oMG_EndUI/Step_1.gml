@@ -4,6 +4,12 @@ if (oGameManager.hasController) {
 	key = gamepad_button_check_pressed(dev, gp_face1)
 }
 
+// Game time
+if (!isGameOver && !global.isMenuOpen) {
+	gameTime += delta_time / 1000000	
+}
+
+// Key validation
 if (global.isMenuOpen) {
 	key = false
 }

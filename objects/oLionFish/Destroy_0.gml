@@ -1,1 +1,1 @@
-oMG_EndUI.gameScore++
+oMG_EndUI.gameScore += 100

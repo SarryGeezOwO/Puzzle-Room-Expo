@@ -20,7 +20,7 @@ if (hasController) {
 
 // toggable only when outside of settings and HTP
 if menuBtn && menuTimer > 0.35 && !global.settingsOpen && !global.htpOpened {
-	if (!isMainMenu) {
+	if (!isMainMenu && room != r_loading) {
 		global.isMenuOpen = !global.isMenuOpen
 		menuTimer = 0	
 	}

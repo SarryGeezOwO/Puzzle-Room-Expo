@@ -11,8 +11,8 @@ if (global.isDebugMode) {
 	draw_set_color(c_white)	
 }
 
-draw_set_font(f_small)
 draw_set_valign(fa_middle)
+draw_set_font(f_small)
 draw_tooltip_control(
 	38, ROOM_HEIGHT-65, 100, oGameManager.hasController, CTR_ESC_OPTIONS, "Pause")
 draw_tooltip_control(
@@ -20,3 +20,4 @@ draw_tooltip_control(
 
 draw_set_font(f_default)
 draw_set_valign(fa_top)
+draw_set_colour(c_white)

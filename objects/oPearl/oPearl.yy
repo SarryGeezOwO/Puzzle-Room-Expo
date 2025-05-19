@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sError",
-    "path":"sprites/sError/sError.yy",
+    "name":"sPearl",
+    "path":"sprites/sPearl/sPearl.yy",
   },
   "spriteMaskId":null,
   "visible":true,

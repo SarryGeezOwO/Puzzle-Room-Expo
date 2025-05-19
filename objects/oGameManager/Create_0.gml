@@ -6,6 +6,7 @@ global.interactableMap = ds_map_create()
 global.inventoryMap = ds_map_create() // Item_ID, Quantity
 
 global.fragmentsCollected = 0
+global.gameTrueScore = 0 // Let's go with Thousands for average sake
 global.gameTime = 180 // 3 Minutes or something IDK
 global.stopGameTime = false
 global.InsideMinigame = false

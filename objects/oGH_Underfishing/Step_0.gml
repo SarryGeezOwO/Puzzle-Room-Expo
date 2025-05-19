@@ -4,11 +4,12 @@ with (oFishHook) {
 		y = 135
 		oPearl.y = 1500
 		hasReachEnd = false
+		other.retries++
 	}
 	
 	// Game end
 	if (y <= 120) {
-		// TODO: SHIT
+		oMG_EndUI.gameScore = (10 - other.retries) * 100
 		oMG_EndUI.isGameOver = true
 	}
 }

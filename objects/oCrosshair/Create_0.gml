@@ -12,4 +12,9 @@ function shoot() {
 	if (position_meeting(x, y, [oFish, oLionFish])) {
 		instance_destroy(instance_position(x, y, [oFish, oLionFish]), true)
 	}
+	else {
+		// You missed!, atleast you didn't kill an innocent fish ey?
+		oMG_EndUI.gameScore -= 50
+	}
+	
 }
