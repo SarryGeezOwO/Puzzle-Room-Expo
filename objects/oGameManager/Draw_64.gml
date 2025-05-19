@@ -2,7 +2,7 @@ var isInv = false
 // Inventory
 
 draw_set_font(f_small)
-if (!global.isMenuOpen && room == r_Overworld && global.isInventoryOpen) {
+if (!global.isMenuOpen && room == global.baseRoom && global.isInventoryOpen) {
 	draw_set_colour(make_colour_rgb(25, 25, 25))
 	draw_roundrect_ext(ROOM_WIDTH-130, 44, ROOM_WIDTH-10, ROOM_HEIGHT-10, 10, 10, false)
 	

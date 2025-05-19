@@ -13,5 +13,9 @@ if (curLayer != "Selected" || !oMainMenu.inputGoodToGo) {
 
 // Activate
 if (rel && curLayer == "Selected" && oMainMenu.inputGoodToGo) {
-	room_goto(r_Overworld)
+	var rooms = tag_get_asset_ids("Overworld", asset_room)
+	
+	global.baseRoom = rooms[irandom_range(0, array_length(rooms)-1)]
+	ds_map_replace(global.minigames, -69, global.baseRoom)
+	room_goto(global.baseRoom)
 }

@@ -1,5 +1,5 @@
 draw_sprite_ext(
-	sPlayButton, 
+	sprite_index, 
 	isPressed, 
 	x, y, 
 	image_xscale, image_yscale, 

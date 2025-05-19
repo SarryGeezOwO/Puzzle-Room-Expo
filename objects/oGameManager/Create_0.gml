@@ -21,6 +21,7 @@ global.htpSelected = 0
 global.htpOpened = false
 global.settingsOpen = false
 global.managerCount = 0;
+global.baseRoom = r_Overworld1 // Man, this will update on start and exit of game
 if (!variable_global_exists("htpImages")) global.htpImages = [HTP_Movement, HTP_Interactable, HTP_Minigame]
 with(oGameManager) {
 	global.managerCount++;
@@ -66,7 +67,6 @@ function getItemCountInventory(item_ID) {
 }
 
 // Minigame map
-ds_map_add(global.minigames, -69, r_Overworld)
 function addGame(g_id, type) {
 	ds_map_add(global.minigames, g_id, type)	
 }
@@ -97,8 +97,10 @@ addHTPName(1, "Interactable Objects")
 addHTPName(2, "Minigames")
 
 // Types are also based on sprite index
+ds_map_add(global.minigames, -69, global.baseRoom)
 addGame(0, r_lionHunt)
 addGame(1, r_trashSort)
+addGame(2, r_underfishing)
 
 room_to_load = -1
 lastPlayerPos = [-1, -1]
@@ -139,7 +141,11 @@ function menu_settings() {
 }
 
 function menu_exit() {
+	room_persistent = false // Well, I mean overworld rooms are the only persistent rooms anyways
+	
 	room_goto(r_MainMenu)
+	room_set_persistent(global.baseRoom, true) // BaseRoom refers to the selected OverWorld map
+	
 	oGameManager.room_to_load = -1
 	oGameManager.lastPlayerPos = [-1, -1]
 	oGameManager.loadPlayerPos = false
@@ -149,5 +155,7 @@ function menu_exit() {
 	global.isMenuOpen = false
 	global.htpOpened = false
 	global.settingsOpen = false
+	global.isInventoryOpen = false
+	ds_map_clear(global.inventoryMap)
 	ds_map_clear(global.interactableMap)
 }
