@@ -30,6 +30,13 @@ function draw_controls(cx, cy, isController, ctrl_id) {
 	)
 }
 
+// No way in hell we're reaching past 10 minutes
+function time_format(_minutes, _seconds) {
+    var _leading_space_format = string(_minutes) + ":" + string_format(_seconds, 2, 0);
+    var _leading_zero_format = string_replace_all(_leading_space_format, " ", "0");
+    return _leading_zero_format;
+}
+
 function draw_tooltip_control(cx, cy, w, isController, ctrl_id, text) {
 	// Assuming text is going from left to right
 	var size = 30 // Width

@@ -1,0 +1,9 @@
+[/] 0 - Lionfish Hunting
+[/] 1 - Trash Sorting
+[/] 2 - Underfishing
+[X] 4 - Pipe Leaks
+[X] 5 - Grazing Seaweeds
+[X] 6 - Riddle me clam
+
+[/] - Minigame implemented
+[X] - Minigame not yet implemented

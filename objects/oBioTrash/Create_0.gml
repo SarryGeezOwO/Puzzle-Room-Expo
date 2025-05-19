@@ -1,1 +1,1 @@
-spr = irandom_range(0, 1)
+spr = irandom_range(0, sprite_get_number(sBioTrash)-1)

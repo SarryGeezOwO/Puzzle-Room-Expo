@@ -1,1 +1,1 @@
-oGH_LionFishHunt.gameScore++
+oMG_EndUI.gameScore++

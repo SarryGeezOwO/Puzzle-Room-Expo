@@ -111,6 +111,7 @@ function load_game(g_id)
 	oGameManager.lastPlayerPos = [oPlayer.x, oPlayer.y]
 	oGameManager.room_to_load = g_id
 	global.InsideMinigame = true
+	global.stopGameTime = true
 	room_goto(r_loading)
 }
 
@@ -118,6 +119,7 @@ function goback_game()
 {
 	oGameManager.loadPlayerPos = true
 	oGameManager.room_to_load = -69;
+	global.stopGameTime = false
 	global.InsideMinigame = false
 	global.stopGameTime = false
 	room_goto(r_loading)

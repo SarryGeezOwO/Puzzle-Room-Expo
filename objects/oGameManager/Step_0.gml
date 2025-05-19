@@ -40,7 +40,9 @@ if (object_exists(oMenu)) {
 	}
 	else { 
 		instance_deactivate_object(oMenu)
-		global.stopGameTime = false
+		if(!global.InsideMinigame) { // Don't continue time if inside a minigame
+			global.stopGameTime = false	
+		}
 		resetMenu = true
 	}
 }

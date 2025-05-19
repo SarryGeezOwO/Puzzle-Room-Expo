@@ -9,10 +9,11 @@ var cy = getCamY()
 draw_set_font(f_big)
 draw_set_color(c_black)
 
-if (!isMainMenu) {
+// Draw Global Time
+if (!isMainMenu && !global.InsideMinigame) {
 	var m = floor(global.gameTime / 60)
-	var s = floor(global.gameTime % 60)
-	draw_text(cx, cy + 25, string(m)+":"+string(s))
+	var s = floor(global.gameTime % 60)	
+	draw_text(cx, cy + 25, time_format(m, s))
 }
 
 draw_set_font(f_default)

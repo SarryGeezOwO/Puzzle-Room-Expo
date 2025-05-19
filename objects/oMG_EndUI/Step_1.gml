@@ -12,4 +12,3 @@ if (key && isGameOver) {
 	// Return
 	oGameManager.goback_game()
 }
-

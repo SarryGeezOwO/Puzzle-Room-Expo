@@ -1,4 +1,4 @@
-oGameManager.addInteractable(tag_id, object_index)
+oGameManager.addInteractable(tag_id, id)
 tilemap = layer_get_id("Toxic_"+string(Tilemap_ID));
 
 function invoke() {

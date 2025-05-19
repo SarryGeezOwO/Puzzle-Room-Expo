@@ -22,18 +22,5 @@ with(all) {
 
 // Game done
 if (trashCount <= 0) {
-	gameOver = true	
-	global.stopGameTime = true
-	
-	var next = keyboard_check( vk_space )
-	
-	if (oGameManager.hasController) {
-		var dev = oGameManager.devices[0];
-		next = gamepad_button_check(dev, gp_face1)
-	}
-	
-	if (next) {
-		global.stopGameTime = false
-		oGameManager.goback_game()
-	}
+	oMG_EndUI.isGameOver = true
 }

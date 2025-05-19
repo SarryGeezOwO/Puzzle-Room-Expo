@@ -11,14 +11,10 @@ if (fireTimer >= 0) {
 
 // Minigame end
 if (harpoonLeft <= 0) {
-	gameEnd();
+	oMG_EndUI.isGameOver = true
 }
 
-if (shootKey && fireTimer <= 0)
+if (shootKey && fireTimer <= 0 && !oMG_EndUI.isGameOver)
 {
-	if (gameOver) {
-		oGameManager.goback_game()
-		global.stopGameTime = false
-	}
-	else shoot();
+	shoot();
 }

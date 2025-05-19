@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oGH_TrashSort",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oStartBound",
+  "eventList":[],
   "managed":true,
-  "name":"oGH_TrashSort",
+  "name":"oStartBound",
   "overriddenProperties":[],
   "parent":{
     "name":"TrashSorting",

@@ -3,6 +3,6 @@ if (x >= room_width || x <= 0) {
 }
 
 xSpeed = lookDir * moveSpd;
-if (!oGH_LionFishHunt.gameOver) {
+if (!oMG_EndUI.isGameOver) {
 	x+= xSpeed;	
 }
