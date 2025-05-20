@@ -37,6 +37,13 @@ function time_format(_minutes, _seconds) {
     return _leading_zero_format;
 }
 
+function draw_item_count(cx, cy, item_id, count) {
+	draw_set_font(f_small)
+	draw_sprite_ext(sItem, item_id, cx-10, cy, 1, 1, 0, c_white, 1)
+	draw_text(cx+10, cy, string(count)+"x")
+	draw_set_font(f_default)
+}
+
 // Useful for displaying the item obtained
 function draw_item_tooltip(cx, cy, head, text, item_id) {
 	draw_set_colour(c_black)

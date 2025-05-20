@@ -28,6 +28,10 @@ if interact_prog > 0
 		true
 	)
 }
+else {
+	// Display item requirement UI
+	if (isInRange()) draw_item_count(x, y+topOffset, ITEM_ID_TRASH, 5)
+}
 
 draw_set_colour(c_white)
 draw_self()
