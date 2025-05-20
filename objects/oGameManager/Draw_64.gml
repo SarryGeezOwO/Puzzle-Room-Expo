@@ -31,12 +31,15 @@ draw_set_font(f_default)
 
 // Draw 
 if (itemDrawTimer > 0) {
-	draw_item_tooltip(ROOM_WIDTH/2, ROOM_HEIGHT - 40, "Item obtained", ds_queue_head(itemDrawQueue))
+	var itemID = ds_queue_head(itemDrawQueue)
+	if (itemID != undefined) {
+		draw_item_tooltip(ROOM_WIDTH/2, ROOM_HEIGHT - 50, "Item obtained", getItemDesc(itemID), itemID)	
+	}
 }
 else {
 	if (!ds_queue_empty(itemDrawQueue)) {
-		itemDrawTimer = 1.25;
 		ds_queue_dequeue(itemDrawQueue)
+		itemDrawTimer = 1.75;
 	}
 }
 

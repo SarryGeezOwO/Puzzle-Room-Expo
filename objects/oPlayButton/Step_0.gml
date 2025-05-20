@@ -17,5 +17,7 @@ if (rel && curLayer == "Selected" && oMainMenu.inputGoodToGo) {
 	
 	global.baseRoom = rooms[irandom_range(0, array_length(rooms)-1)]
 	ds_map_replace(global.minigames, -69, global.baseRoom)
+	
+	
 	room_goto(global.baseRoom)
 }

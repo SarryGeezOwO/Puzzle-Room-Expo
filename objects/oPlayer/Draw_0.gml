@@ -11,6 +11,8 @@ draw_circle(
 // var scaledPos = scale_position_by_vector(lookDir, vaccumMaxRange, [x, y])
 // draw_line_width(x, y, scaledPos[0], scaledPos[1], 3)
 
+layer_enable_fx(layer, additionalSpdDuration > 0)
+
 // Vaccum gun
 draw_sprite_ext(
 	sVacum, -1, leftFin.bx, leftFin.by,

@@ -38,17 +38,32 @@ function time_format(_minutes, _seconds) {
 }
 
 // Useful for displaying the item obtained
-function draw_item_tooltip(cx, cy, text, item_id) {
+function draw_item_tooltip(cx, cy, head, text, item_id) {
 	draw_set_colour(c_black)
-	draw_set_alpha(0.5)
+	draw_set_alpha(0.85)
+	
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_middle)
 	
 	// Width depends on text length
-	var width = string_width(text) + 10
+	var longest = (string_length(head) > string_length(text)) ? head : text
+	var width = string_width(longest) + 16
 	
-	draw_rectangle(cx - width/2, cy - 10, cx + width/2, cy + 10, false)
+	draw_roundrect_ext(cx - width/2, cy - 42, cx + width/2, cy + 42, 10, 10, false)
 	draw_set_alpha(1)
-
+	
+	draw_set_font(f_small)
+	draw_sprite_ext(sItem, item_id, cx, cy - 20, 1, 1, 0, c_white, 1)
+	
+	draw_set_colour(c_gray)
+	draw_text(cx, cy+8, head)
+	
 	draw_set_colour(c_white)
+	draw_text(cx, cy + 28, text)
+	
+	draw_set_font(f_default)
+	draw_set_halign(fa_left)
+	draw_set_valign(fa_top)
 }
 
 function draw_tooltip_control(cx, cy, w, isController, ctrl_id, text) {

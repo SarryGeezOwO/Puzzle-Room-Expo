@@ -1,6 +1,6 @@
 [ ] Pipe Leak minigame
 [ ] Fragment
-[ ] Item obtain helper GUI
+[/] Item obtain helper GUI
 [ ] Minigame HTP on loading screen
 [ ] Trash Throw point and score
 [ ] Temp movement boost 2x on 5+ trash thrown

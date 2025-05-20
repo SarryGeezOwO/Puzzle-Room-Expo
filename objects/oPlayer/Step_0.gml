@@ -52,8 +52,8 @@ if (diff < 0) {
     input = [perp[0] * length, perp[1] * length]; 
 }
 
-velX = offset[0] + input[0] * moveSpd
-velY = offset[1] + input[1] * moveSpd
+velX = offset[0] + input[0] * (moveSpd + additionalSpd)
+velY = offset[1] + input[1] * (moveSpd + additionalSpd)
 prevInput = rawInput
 
 // Horizontal Collision

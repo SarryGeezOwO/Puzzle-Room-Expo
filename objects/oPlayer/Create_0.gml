@@ -20,6 +20,8 @@ input = [0, 0]
 velX = 0
 velY = 0
 moveSpd = 4
+additionalSpd = 0
+additionalSpdDuration = 0 // Milliseconds
 
 function bodyPoint(_x, _y, _w, _d, _a) constructor {
 	bx = _x;
@@ -28,6 +30,7 @@ function bodyPoint(_x, _y, _w, _d, _a) constructor {
 	bd = _d;
 	a = _a;
 };
+
 
 lookDir = [0, 0] // Normalized version
 lookAheadPoint = [0, 0]
@@ -60,4 +63,9 @@ bodyPoints = [
 	new bodyPoint(0, 0, 3,  3, -1),
 	new bodyPoint(0, 0, 3,  3, -1),
 ]
+
+function addSpdBuff(sped, spedTime) {
+	oPlayer.additionalSpd = sped
+	oPlayer.additionalSpdDuration = spedTime
+}
 

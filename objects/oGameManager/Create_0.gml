@@ -4,6 +4,7 @@ global.HTP_Names = ds_map_create() // index, Name
 global.minigames = ds_map_create()
 global.interactableMap = ds_map_create()
 global.inventoryMap = ds_map_create() // Item_ID, Quantity
+global.itemDescMap = ds_map_create() // Item_ID, Description
 
 global.fragmentsCollected = 0
 global.gameTrueScore = 0 // Let's go with Thousands for average sake
@@ -61,9 +62,27 @@ function addItemInventory(item_ID, appendCount) {
 	}
 	else {
 		// First time getting it
+		itemDrawTimer = 1.75
 		ds_map_add(global.inventoryMap, item_ID, appendCount)	
 		ds_queue_enqueue(itemDrawQueue, item_ID)
 	}
+}
+
+function removeItemInventory(item_id, count) {
+	if (ds_map_exists(global.inventoryMap, item_id)) {
+		var oldCount = ds_map_find_value(global.inventoryMap, item_id)
+		if (oldCount - count <= 0) {
+			// Simply remove this item on the map
+			ds_map_delete(global.inventoryMap, item_id)
+			return
+		}
+		ds_map_replace(global.inventoryMap, item_id, oldCount - count)
+	}
+}
+
+// Get Item description
+function getItemDesc(item_id) {
+	return ds_map_find_value(global.itemDescMap, item_id)	
 }
 
 // get Item on Inventory
@@ -107,6 +126,9 @@ addGame(0, r_lionHunt)
 addGame(1, r_trashSort)
 addGame(2, r_underfishing)
 
+// ItemMap desc
+ds_map_add(global.itemDescMap, ITEM_ID_TRASH, "A plain old trash.")	
+
 room_to_load = -1
 lastPlayerPos = [-1, -1]
 loadPlayerPos = false
@@ -147,12 +169,7 @@ function menu_settings() {
 	global.settingsOpen = true
 }
 
-function menu_exit() {
-	room_persistent = false // Well, I mean overworld rooms are the only persistent rooms anyways
-	
-	room_goto(r_MainMenu)
-	room_set_persistent(global.baseRoom, true) // BaseRoom refers to the selected OverWorld map
-	
+function menu_exit() {	
 	oGameManager.room_to_load = -1
 	oGameManager.lastPlayerPos = [-1, -1]
 	oGameManager.loadPlayerPos = false
@@ -163,7 +180,12 @@ function menu_exit() {
 	global.htpOpened = false
 	global.settingsOpen = false
 	global.isInventoryOpen = false
+	global.gameTrueScore = 0
 	ds_map_clear(global.inventoryMap)
 	ds_map_clear(global.interactableMap)
 	ds_queue_clear(itemDrawQueue)
+	
+	room_persistent = false // Well, I mean overworld rooms are the only persistent rooms anyways
+	room_goto(r_MainMenu)
+	room_set_persistent(global.baseRoom, true) // BaseRoom refers to the selected OverWorld map
 }
