@@ -10,6 +10,10 @@ else {
 	}
 }
 
+if (itemDrawTimer > 0) {
+	itemDrawTimer -= delta_time / 1000000
+}
+
 // Determine settings
 audio_master_gain(!global.audioMute)
 window_set_fullscreen(global.gameFullScreen)

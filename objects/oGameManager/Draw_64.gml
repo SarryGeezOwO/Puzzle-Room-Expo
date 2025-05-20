@@ -29,6 +29,17 @@ if (!global.isMenuOpen && room == global.baseRoom && global.isInventoryOpen) {
 draw_set_colour(c_white)
 draw_set_font(f_default)
 
+// Draw 
+if (itemDrawTimer > 0) {
+	draw_item_tooltip(ROOM_WIDTH/2, ROOM_HEIGHT - 40, "Item obtained", ds_queue_head(itemDrawQueue))
+}
+else {
+	if (!ds_queue_empty(itemDrawQueue)) {
+		itemDrawTimer = 1.25;
+		ds_queue_dequeue(itemDrawQueue)
+	}
+}
+
 // Controller detection
 var inputType = (hasController ? sController : sKeyboard)
 draw_sprite_ext(

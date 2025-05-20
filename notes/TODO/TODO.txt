@@ -1,9 +1,10 @@
-[] Pipe Leak minigame
-[] Fragment 
-[] Item obtain helper GUI
-[] Minigame HTP on loading screen
-[] Trash Throw point and score
-[] Temp movement boost 2x on 5+ trash thrown
-[] Use Item UI near interactables
+[ ] Pipe Leak minigame
+[ ] Fragment
+[ ] Item obtain helper GUI
+[ ] Minigame HTP on loading screen
+[ ] Trash Throw point and score
+[ ] Temp movement boost 2x on 5+ trash thrown
+[ ] Use Item UI near interactables
 	example: A Trash icon with an X near the trash throw point will appear 
 			if you don't have atleast one trash in your inventory
+

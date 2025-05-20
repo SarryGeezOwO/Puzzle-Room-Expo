@@ -13,6 +13,8 @@ global.InsideMinigame = false
 global.isDebugMode = false
 global.isMenuOpen = false
 global.isInventoryOpen = false
+itemDrawQueue = ds_queue_create()
+itemDrawTimer = 0
 
 // Settings shit (addd more to future if needed)
 global.audioMute = false
@@ -58,7 +60,9 @@ function addItemInventory(item_ID, appendCount) {
 		ds_map_replace(global.inventoryMap, item_ID, oldCount + appendCount)
 	}
 	else {
+		// First time getting it
 		ds_map_add(global.inventoryMap, item_ID, appendCount)	
+		ds_queue_enqueue(itemDrawQueue, item_ID)
 	}
 }
 
@@ -161,4 +165,5 @@ function menu_exit() {
 	global.isInventoryOpen = false
 	ds_map_clear(global.inventoryMap)
 	ds_map_clear(global.interactableMap)
+	ds_queue_clear(itemDrawQueue)
 }

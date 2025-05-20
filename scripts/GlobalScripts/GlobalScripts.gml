@@ -37,6 +37,20 @@ function time_format(_minutes, _seconds) {
     return _leading_zero_format;
 }
 
+// Useful for displaying the item obtained
+function draw_item_tooltip(cx, cy, text, item_id) {
+	draw_set_colour(c_black)
+	draw_set_alpha(0.5)
+	
+	// Width depends on text length
+	var width = string_width(text) + 10
+	
+	draw_rectangle(cx - width/2, cy - 10, cx + width/2, cy + 10, false)
+	draw_set_alpha(1)
+
+	draw_set_colour(c_white)
+}
+
 function draw_tooltip_control(cx, cy, w, isController, ctrl_id, text) {
 	// Assuming text is going from left to right
 	var size = 30 // Width
