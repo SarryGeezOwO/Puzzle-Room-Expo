@@ -139,7 +139,33 @@ function is_flow_valid(gSize, startIndex, endIndex, startP, endP) {
 	return goalReached;	
 }
 
+function getSprDir(dir) {
+	switch(dir) {
+		case "NORTH": return 0
+		case "EAST": return 1
+		case "SOUTH": return 2
+		case "WEST": return 3
+	}
+}
 
+function getOppositeDir(dir) {
+	switch(dir) {
+		case "NORTH": return "SOUTH"
+		case "EAST": return "WEST"
+		case "SOUTH": return "NORTH"
+		case "WEST": return "EAST"
+	}
+}
+
+// Bool (isVert), offset
+function getDirOffset(dir) {
+	switch(dir) {
+		case "NORTH": return [true, -70]
+		case "EAST": return [false, 70]
+		case "SOUTH": return [true, 70]
+		case "WEST": return [false, -70]
+	}
+}
 
 function createPipe(spr_indx, connectionPoints) {
     var pipe = new PipeTile();

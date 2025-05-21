@@ -140,6 +140,7 @@
     {"id":{"name":"sNotice","path":"sprites/sNotice/sNotice.yy",},},
     {"id":{"name":"sPanelTiles","path":"sprites/sPanelTiles/sPanelTiles.yy",},},
     {"id":{"name":"sPearl","path":"sprites/sPearl/sPearl.yy",},},
+    {"id":{"name":"SPipeArrow","path":"sprites/SPipeArrow/SPipeArrow.yy",},},
     {"id":{"name":"sPipes","path":"sprites/sPipes/sPipes.yy",},},
     {"id":{"name":"sPipesDeco","path":"sprites/sPipesDeco/sPipesDeco.yy",},},
     {"id":{"name":"sPlayButton","path":"sprites/sPlayButton/sPlayButton.yy",},},

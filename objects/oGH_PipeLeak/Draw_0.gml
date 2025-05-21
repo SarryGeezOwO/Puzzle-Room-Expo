@@ -49,4 +49,14 @@ for (var i = 0; i < gridSize; i++) {
 	}
 }
 
+var vofst = getDirOffset(StartPipe.requiredConn)
+var hofst = getDirOffset(EndPipe.requiredConn)
+draw_sprite(SPipeArrow, getSprDir(getOppositeDir(StartPipe.requiredConn)), 
+	(cx+(StartPipe.pos[1]*sprSize)+rectSize) + (vofst[0] == true ? 0 : 1) * vofst[1], 
+	(cy+(StartPipe.pos[0]*sprSize)+rectSize) + (vofst[0] == true ? 1 : 0) * vofst[1])
+
+draw_sprite(SPipeArrow, getSprDir((EndPipe.requiredConn)), 
+	(cx+(EndPipe.pos[1]*sprSize)+rectSize) + (hofst[0] == true ? 0 : 1) * hofst[1], 
+	(cy+(EndPipe.pos[0]*sprSize)+rectSize) + (hofst[0] == true ? 1 : 0) * hofst[1])
+
 draw_set_colour(c_white)

@@ -1,5 +1,5 @@
 [/] Pipe Leak minigame
-[ ] Pipe Start And End Sprite, Green and Red with arrow Icons
+[/] Pipe Start And End Sprite, Green and Red with arrow Icons
 [ ] Fragment
 [/] Item obtain helper GUI
 [ ] Minigame HTP on loading screen
