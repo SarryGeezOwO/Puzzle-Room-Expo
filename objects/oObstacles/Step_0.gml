@@ -3,3 +3,7 @@ if (reachEnd) {
 	lookdir *= -1
 }
 x += lookdir * spd
+
+if (image_xscale != lookdir) {
+	image_xscale = lookdir	
+}

@@ -16,6 +16,6 @@ if interact_prog >= interact_prog_max {
 	oPlayer.addSpdBuff(oPlayer.moveSpd, 5000)
 	
 	// That's 500 points per thrown
-	global.gameTrueScore += 500
+	global.gameTrueScore += 1000
 	interact_prog = 0;
 }

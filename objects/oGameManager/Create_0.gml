@@ -17,6 +17,9 @@ global.isInventoryOpen = false
 itemDrawQueue = ds_queue_create()
 itemDrawTimer = 0
 
+// Disable mouse cursor
+window_set_cursor(cr_none)
+
 // Settings shit (addd more to future if needed)
 global.audioMute = false
 global.gameFullScreen = false
@@ -125,6 +128,7 @@ ds_map_add(global.minigames, -69, global.baseRoom)
 addGame(0, r_lionHunt)
 addGame(1, r_trashSort)
 addGame(2, r_underfishing)
+addGame(3, r_pipeLeak)
 
 // ItemMap desc
 ds_map_add(global.itemDescMap, ITEM_ID_TRASH, "A plain old trash.")	

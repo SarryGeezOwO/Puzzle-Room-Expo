@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayButton",
-    "path":"sprites/sPlayButton/sPlayButton.yy",
+    "name":"sTutorialButton",
+    "path":"sprites/sTutorialButton/sTutorialButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
