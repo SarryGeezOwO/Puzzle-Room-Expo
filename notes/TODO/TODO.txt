@@ -8,3 +8,14 @@
 [/] Use Item UI near interactables
 	example: A Trash icon with an X near the trash throw point will appear 
 			if you don't have atleast one trash in your inventory
+
+// Do this on order please
+[ ] Auto generated Pipes
+[ ] Gates requiring Items, with description
+[ ] End Gate
+[ ] End Screen
+[ ] Minigame item drops
+[ ] Riddle me clam Minigame
+[ ] Lionfish Reimplementation
+[ ] Tilemap redesighn
+[ ] Sound effects
