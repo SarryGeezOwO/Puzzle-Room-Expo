@@ -11,9 +11,41 @@
 
 // Items
 #macro ITEM_ID_TRASH	0
+#macro ITEM_ID_KEY_FRAG	1
 
 #macro ROOM_WIDTH 1366
 #macro ROOM_HEIGHT 768
+
+// Answer is the same index of the quesiton
+global.riddle_questions = [
+  "What is the largest ocean on Earth?",
+  "Which ocean lies between Africa and Australia?",
+  "What is the name of the underwater mountain range in the Atlantic Ocean?",
+  "Which ocean is home to the Mariana Trench, the deepest part of the world's oceans?",
+  "What body of water connects the Atlantic Ocean to the Mediterranean Sea?",
+  "What phenomenon causes the rise and fall of sea levels, typically twice a day?",
+  "What is the longest mountain range on Earth, mostly hidden beneath the ocean?",
+  "Which oceanic trench is the deepest known point in Earth's oceans?",
+  "What is the primary cause of global sea level rise?",
+  "Which ocean is the warmest on average?"
+];
+
+global.riddle_answers = [
+  "Pacific Ocean",
+  "Indian Ocean",
+  "Mid-Atlantic Ridge",
+  "Pacific Ocean",
+  "Strait of Gibraltar",
+  "Tides",
+  "Mid-ocean ridge",
+  "Mariana Trench",
+  "Thermal expansion and melting ice",
+  "Indian Ocean"
+];
+
+function substr(str, ofst, len) {
+	return string_copy(str, ofst, len)
+}
 
 function getCamX() {
 	return camera_get_view_x(view_get_camera(0))	

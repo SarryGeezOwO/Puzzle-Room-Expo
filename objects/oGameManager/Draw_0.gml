@@ -36,7 +36,7 @@ function draw_nth(text, order) {
 
 // Draw Tasks
 draw_set_font(f_small)
-draw_nth("Fragments Collected: " + string(global.fragmentsCollected), 1)
+draw_nth("Fragments Collected: " + string(oGameManager.getItemCountInventory(ITEM_ID_KEY_FRAG)), 1)
 draw_nth("GameManagers UUID" + string(global.gameManagerUUID), 2)
 draw_nth("BaseRoom: " + room_get_name(global.baseRoom), 3)
 draw_set_font(f_default)

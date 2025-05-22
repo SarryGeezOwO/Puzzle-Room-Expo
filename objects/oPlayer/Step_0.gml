@@ -67,7 +67,7 @@ for (var i = 0; i < array_length(layers); i++) {
 		colI++
 	}
 }
-
+array_push(collisions, oGate) // real
 if position_meeting(x + (velX * 2), y, layer_tilemap_get_id("SandTiles")) || position_meeting(x + (velX * 2), y, collisions) || (x + velX <= 0 || x+velX >= room_width)
 {
 	velX = 0;

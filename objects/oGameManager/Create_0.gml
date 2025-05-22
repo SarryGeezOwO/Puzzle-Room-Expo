@@ -6,7 +6,6 @@ global.interactableMap = ds_map_create()
 global.inventoryMap = ds_map_create() // Item_ID, Quantity
 global.itemDescMap = ds_map_create() // Item_ID, Description
 
-global.fragmentsCollected = 0
 global.gameTrueScore = 0 // Let's go with Thousands for average sake
 global.gameTime = 180 // 3 Minutes or something IDK
 global.stopGameTime = false
@@ -65,7 +64,7 @@ function addItemInventory(item_ID, appendCount) {
 	}
 	else {
 		// First time getting it
-		itemDrawTimer = 1.75
+		itemDrawTimer = 2.5
 		ds_map_add(global.inventoryMap, item_ID, appendCount)	
 		ds_queue_enqueue(itemDrawQueue, item_ID)
 	}
@@ -129,9 +128,11 @@ addGame(0, r_lionHunt)
 addGame(1, r_trashSort)
 addGame(2, r_underfishing)
 addGame(3, r_pipeLeak)
+addGame(4, r_RiddleMeClam)
 
 // ItemMap desc
 ds_map_add(global.itemDescMap, ITEM_ID_TRASH, "A plain old trash.")	
+ds_map_add(global.itemDescMap, ITEM_ID_KEY_FRAG, "A Fragment of an Exit Pass.")	
 
 room_to_load = -1
 lastPlayerPos = [-1, -1]

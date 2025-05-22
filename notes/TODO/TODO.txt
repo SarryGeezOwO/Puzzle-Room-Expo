@@ -11,11 +11,14 @@
 
 // Do this on order please
 [ ] Auto generated Pipes
-[ ] Gates requiring Items, with description
-[ ] End Gate
+[/] Gates requiring Items, with description
+[/] End Gate
 [ ] End Screen
-[ ] Minigame item drops
+[/] Minigame item drops
 [ ] Riddle me clam Minigame
 [ ] Lionfish Reimplementation
 [ ] Tilemap redesighn
 [ ] Sound effects
+[/] minigames disappear on completion, but still guranteeing an item drop or some shit
+
+Controller inputs for PipeLeaks, and Riddle me clam

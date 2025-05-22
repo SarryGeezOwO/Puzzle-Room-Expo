@@ -28,7 +28,7 @@ if (isGameOver) {
 	draw_set_font(f_big)
 	draw_text(cx, cy-70, "TIME COMPLETION")
 	draw_set_font(f_HTP)
-	draw_text(cx, cy-40, string(floor(gameTime)) + " sec")
+	draw_text(cx, cy-40, string(gameTime) + " sec")
 	
 	draw_set_font(f_big)
 	draw_text(cx, cy, "TOTAL SCORE")

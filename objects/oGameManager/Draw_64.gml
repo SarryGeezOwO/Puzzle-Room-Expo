@@ -16,13 +16,14 @@ if (!global.isMenuOpen && room == global.baseRoom && global.isInventoryOpen) {
 		// Refer to ITEM_ID_, in GlobalScript to lookup the item you want
 	
 		var key = arr[i]
+		var ofst = 50
 		var val = ds_map_find_value(global.inventoryMap, key);
 		draw_sprite_ext( // Shadow // Shadow
-			sItem, key, ROOM_WIDTH-90, ((i+1) * 36) + 121,
+			sItem, key, ROOM_WIDTH-90, ((i+1) * ofst) + 90,
 			1, 1, 0, c_black, 1
 		)
-		draw_sprite(sItem, key, ROOM_WIDTH-85, ((i+1) * 36) + 116)
-		draw_text(ROOM_WIDTH-55, ((i+1) * 36) + 109, "x"+string(val))
+		draw_sprite(sItem, key, ROOM_WIDTH-85, ((i+1) * ofst) + 85)
+		draw_text(ROOM_WIDTH-55, ((i+1) * ofst) + 80, "x"+string(val))
 	
 	}	
 }
