@@ -1,6 +1,6 @@
 draw_set_colour(c_black)
 if(isNear && !isOpen) {
-	draw_set_alpha(0.5)
+	draw_set_alpha(0.3)
 	if (CLOSE_DIR_Y) {
 		draw_rectangle(
 			x-((sprite_width/2)+(range/2)), 

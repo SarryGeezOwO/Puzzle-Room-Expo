@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sError",
-    "path":"sprites/sError/sError.yy",
+    "name":"sTrashpoint",
+    "path":"sprites/sTrashpoint/sTrashpoint.yy",
   },
   "spriteMaskId":null,
   "visible":true,

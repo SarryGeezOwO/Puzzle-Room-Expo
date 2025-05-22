@@ -1,5 +1,5 @@
 isNear = false
-range = 70
+range = 80
 isOpen = false
 
 interact_prog = 0;

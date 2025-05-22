@@ -10,7 +10,7 @@ draw_set_font(f_big)
 draw_set_color(c_black)
 
 // Draw Global Time
-if (!isMainMenu && !global.InsideMinigame) {
+if (!isMainMenu && !global.InsideMinigame && room == global.baseRoom) {
 	var m = floor(global.gameTime / 60)
 	var s = floor(global.gameTime % 60)	
 	draw_text(cx, cy + 25, time_format(m, s))

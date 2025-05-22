@@ -38,6 +38,9 @@ if (isGameOver) {
 	draw_text(cx, cy+90, "PRESS")
 	draw_controls(cx, cy+125, oGameManager.hasController, CTR_SPACE_CROSS)
 	draw_text(cx, cy+160, "TO CONTINUE")
+	
+	draw_set_font(f_HTP)
+	if (specialMsg) draw_text(cx, cy+195, "You lost one heart")
 }
 else {
 	draw_set_halign(fa_center)

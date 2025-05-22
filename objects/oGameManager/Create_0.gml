@@ -7,6 +7,7 @@ global.inventoryMap = ds_map_create() // Item_ID, Quantity
 global.itemDescMap = ds_map_create() // Item_ID, Description
 
 // Resetable
+global.hearts = 3
 global.isGameOver = false // Is it finally over joe?? this is for both win and loss
 global.isGameWon = false // Determines the text if won or loss
 global.gameTrueScore = 0 // Let's go with Thousands for average sake
@@ -33,7 +34,14 @@ global.htpOpened = false
 global.settingsOpen = false
 global.managerCount = 0;
 global.baseRoom = r_Overworld1 // Man, this will update on start and exit of game
-if (!variable_global_exists("htpImages")) global.htpImages = [HTP_Movement, HTP_Interactable, HTP_Minigame]
+if (!variable_global_exists("htpImages")) {
+	global.htpImages = [
+		HTP_Movement, HTP_Interactable, HTP_Minigame,
+		HTP_TrashDisposal, HTP_EndGoal, 
+		HTP_LionHunt, HTP_TrashSorta, HTP_PipeLeaks,
+		HTP_Underfishing, HTP_RiddleMeClam
+	]	
+}
 with(oGameManager) {
 	global.managerCount++;
 }
@@ -127,6 +135,13 @@ function getHTPName(index) {
 addHTPName(0, "Player Movement")
 addHTPName(1, "Interactable Objects")
 addHTPName(2, "Minigames")
+addHTPName(3, "Trash Disposal")
+addHTPName(4, "End Goal")
+addHTPName(5, "MG Hunt Hunt Lionfish")
+addHTPName(6, "MG Trash Sorta")
+addHTPName(7, "MG Pipe Leaks")
+addHTPName(8, "MG Underfishing")
+addHTPName(9, "MG Riddle me Clam")
 
 // Types are also based on sprite index
 ds_map_add(global.minigames, -69, global.baseRoom)
@@ -194,6 +209,7 @@ function menu_exit() {
 	global.gameTrueScore = 0
 	global.isGameOver = false
 	global.isGameWon = false
+	global.hearts = 3
 	ds_map_clear(global.inventoryMap)
 	ds_map_clear(global.interactableMap)
 	ds_queue_clear(itemDrawQueue) 

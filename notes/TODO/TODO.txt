@@ -2,7 +2,6 @@
 [/] Pipe Start And End Sprite, Green and Red with arrow Icons
 [/] Fragment
 [/] Item obtain helper GUI
-[ ] Minigame HTP on loading screen
 [/] Trash Throw point and score
 [/] Temp movement boost 2x on 5+ trash thrown
 [/] Use Item UI near interactables
@@ -16,12 +15,13 @@
 [/] End Screen
 [/] Minigame item drops
 [/] Riddle me clam Minigame
-[ ] Lionfish Reimplementation
-[ ] Tilemap redesighn
 [/] Sound effects
-[ ] maxinum retries on Underfishing
+[/] maxinum retries on Underfishing
 [ ] Missing Sprites
 [/] Exit on minigames is just plain broken lmao
-[ ] Heart System - Score zero lose 1 heart yipiee
+[/] Heart System - Score zero lose 1 heart yipiee
+[/] Minigame HTP on loading screen
+[/] Confirmation on loading screen before proceeding on minigame only tho
+[ ] Overworlds map
 [/] Fade Transition when entering a game
 [/] minigames disappear on completion, but still guranteeing an item drop or some shit

@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sError",
-    "path":"sprites/sError/sError.yy",
+    "name":"sGate",
+    "path":"sprites/sGate/sGate.yy",
   },
   "spriteMaskId":null,
   "visible":true,

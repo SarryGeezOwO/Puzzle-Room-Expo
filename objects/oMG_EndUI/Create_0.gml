@@ -5,3 +5,4 @@ isFirstTime = false
 // Overall score will be added to the entire playthrough score
 
 gameTime = 0 // in Seconds
+specialMsg = false

@@ -43,7 +43,7 @@ var limitTag = 3 // +1
 
 // Close all inputs when a window is open
 if (isSettingOpen || isHTPOpen) {
-	limit = (isSettingOpen) ? 3 : 3 // this is index based
+	limit = (isSettingOpen) ? 3 : array_length(global.htpImages) // this is index based
 	res = 0
 	inputGoodToGo = false
 	selectedTag = -1

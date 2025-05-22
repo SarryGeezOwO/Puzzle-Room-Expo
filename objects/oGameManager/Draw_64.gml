@@ -1,4 +1,12 @@
 
+// Draw Hearts
+if (!global.isMenuOpen && room == global.baseRoom)
+{
+	for (var i = 0; i < global.hearts; i++) {
+		draw_sprite(sHeart, 0, 40+(i*38), 32)
+	}
+}
+
 // Inventory
 draw_set_font(f_small)
 if (!global.isMenuOpen && room == global.baseRoom && global.isInventoryOpen) {

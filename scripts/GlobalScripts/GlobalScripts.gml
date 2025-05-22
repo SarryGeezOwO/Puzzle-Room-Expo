@@ -8,6 +8,7 @@
 #macro CTR_S_DOWN		6
 #macro CTR_D_RIGHT		7
 #macro CTR_W_UP			8
+#macro CTR_DIR_STICK	9
 
 // Items
 #macro ITEM_ID_TRASH	0
@@ -49,7 +50,16 @@ global.riddle_answers = [
   "Black Sea"
 ];
 
-
+function getHTP_Room(roomID) {
+	switch(roomID) {
+		case r_lionHunt: return HTP_LionHunt
+		case r_trashSort: return HTP_TrashSorta
+		case r_pipeLeak: return HTP_PipeLeaks
+		case r_RiddleMeClam: return HTP_RiddleMeClam
+		case r_underfishing: return HTP_Underfishing
+		default: return HTP_EndGoal
+	}
+}
 
 function substr(str, ofst, len) {
 	return string_copy(str, ofst, len)

@@ -21,7 +21,12 @@ selectedIndex = 0
 limit = 0;
 
 if (!variable_global_exists("htpImages")) {
-	global.htpImages = [HTP_Movement, HTP_Interactable, HTP_Minigame]
+	global.htpImages = [
+		HTP_Movement, HTP_Interactable, HTP_Minigame,
+		HTP_TrashDisposal, HTP_EndGoal, 
+		HTP_LionHunt, HTP_TrashSorta, HTP_PipeLeaks,
+		HTP_Underfishing, HTP_RiddleMeClam
+	]	
 }
 
 // HTP
