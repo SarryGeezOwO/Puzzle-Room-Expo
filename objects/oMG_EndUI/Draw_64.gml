@@ -40,6 +40,7 @@ if (isGameOver) {
 	draw_text(cx, cy+160, "TO CONTINUE")
 }
 else {
+	draw_set_halign(fa_center)
 	draw_set_font(f_big)
 	draw_set_colour(c_black)
 	draw_text(cx, 20, string(gameTime))	

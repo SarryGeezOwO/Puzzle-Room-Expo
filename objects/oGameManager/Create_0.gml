@@ -1,4 +1,6 @@
 // Maps / Dictionaries
+randomize() // This shit exists??
+
 global.menuOptions = ds_map_create() // index, Function
 global.HTP_Names = ds_map_create() // index, Name
 global.minigames = ds_map_create()

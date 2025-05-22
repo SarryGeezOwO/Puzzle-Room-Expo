@@ -1,6 +1,6 @@
 [/] Pipe Leak minigame
 [/] Pipe Start And End Sprite, Green and Red with arrow Icons
-[ ] Fragment
+[/] Fragment
 [/] Item obtain helper GUI
 [ ] Minigame HTP on loading screen
 [/] Trash Throw point and score
@@ -15,10 +15,10 @@
 [/] End Gate
 [ ] End Screen
 [/] Minigame item drops
-[ ] Riddle me clam Minigame
+[/] Riddle me clam Minigame
 [ ] Lionfish Reimplementation
 [ ] Tilemap redesighn
 [ ] Sound effects
 [/] minigames disappear on completion, but still guranteeing an item drop or some shit
 
-Controller inputs for PipeLeaks, and Riddle me clam
+Controller inputs for PipeLeaks

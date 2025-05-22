@@ -19,29 +19,29 @@
 // Answer is the same index of the quesiton
 global.riddle_questions = [
   "What is the largest ocean on Earth?",
-  "Which ocean lies between Africa and Australia?",
-  "What is the name of the underwater mountain range in the Atlantic Ocean?",
-  "Which ocean is home to the Mariana Trench, the deepest part of the world's oceans?",
-  "What body of water connects the Atlantic Ocean to the Mediterranean Sea?",
-  "What phenomenon causes the rise and fall of sea levels, typically twice a day?",
-  "What is the longest mountain range on Earth, mostly hidden beneath the ocean?",
-  "Which oceanic trench is the deepest known point in Earth's oceans?",
-  "What is the primary cause of global sea level rise?",
-  "Which ocean is the warmest on average?"
+  "It is the world's largest living structure that can even be seen from space",
+  "This is also known as the twilight zone",
+  "It is the deepest known area of the ocean",
+  "It is the world's smallest and shallowest ocean",
+  "Its name came from the Greek word Atlantikos which at the time means 'Sea of Atlas'",
+  "It is a seaweed extract used as an emulsifier in a variety of common products like peanut butter, toothpaste, and cosmetics",
+  "These are magical sea lions who could take human form from the Scottish Myths",
+  "It is the deepest part of the ocean"
 ];
 
 global.riddle_answers = [
   "Pacific Ocean",
-  "Indian Ocean",
-  "Mid-Atlantic Ridge",
-  "Pacific Ocean",
-  "Strait of Gibraltar",
-  "Tides",
-  "Mid-ocean ridge",
+  "Great Barrier Reef",
+  "Mesopolagic",
   "Mariana Trench",
-  "Thermal expansion and melting ice",
-  "Indian Ocean"
+  "Arctic Ocean",
+  "Atlantic Ocean",
+  "Carrageenan",
+  "Selkies",
+  "Challenger Deep"
 ];
+
+
 
 function substr(str, ofst, len) {
 	return string_copy(str, ofst, len)
