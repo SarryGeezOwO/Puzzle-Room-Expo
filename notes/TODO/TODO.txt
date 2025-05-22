@@ -10,7 +10,7 @@
 			if you don't have atleast one trash in your inventory
 
 // Do this on order please
-[ ] Auto generated Pipes
+[/] Auto generated Pipes
 [/] Gates requiring Items, with description
 [/] End Gate
 [ ] End Screen
@@ -20,5 +20,3 @@
 [ ] Tilemap redesighn
 [ ] Sound effects
 [/] minigames disappear on completion, but still guranteeing an item drop or some shit
-
-Controller inputs for PipeLeaks

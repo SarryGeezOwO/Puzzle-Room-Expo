@@ -2,8 +2,8 @@
 [/] 1 - Trash Sorting
 [/] 2 - Underfishing
 [/] 3 - Pipe Leaks
-[X] 4 - Grazing Seaweeds
-[X] 5 - Riddle me clam
+[/] 4 - Riddle me clam
+[X] 5 - Grazing Seaweeds
 
 [/] - Minigame implemented
 [X] - Minigame not yet implemented

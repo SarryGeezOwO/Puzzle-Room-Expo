@@ -9,18 +9,18 @@ if (oGameManager.hasController) {
 	press = gamepad_button_check_pressed( dev, gp_face1 )
 }
 
-if (!oMG_EndUI.isGameOver) {
+if (!oMG_EndUI.isGameOver && !global.isMenuOpen) {
 	selected += sKey - wKey
 	if (selected < 0) selected = array_length(choices)-1
 	else if (selected > array_length(choices)-1) selected = 0	
 }
 
-if ((sKey || wKey) && !oMG_EndUI.isGameOver) {
+if ((sKey || wKey) && !oMG_EndUI.isGameOver && !global.isMenuOpen) {
 	audio_play_sound(sndMenuSelectMove, 1, false, 1.25)
 }
 
 // Submitted
-if (press && !oMG_EndUI.isGameOver) {
+if (press && !oMG_EndUI.isGameOver && !global.isMenuOpen) {
 	var eval = evaluate(choices[selected])
 	array_push(answered, questionI)
 	array_push(assBool, eval)

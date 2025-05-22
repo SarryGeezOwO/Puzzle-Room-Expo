@@ -116,6 +116,7 @@
     {"id":{"name":"SG","path":"scripts/SG/SG.yy",},},
     {"id":{"name":"Vectors","path":"scripts/Vectors/Vectors.yy",},},
     {"id":{"name":"shWater","path":"shaders/shWater/shWater.yy",},},
+    {"id":{"name":"sndClick","path":"sounds/sndClick/sndClick.yy",},},
     {"id":{"name":"sndCollect_1","path":"sounds/sndCollect_1/sndCollect_1.yy",},},
     {"id":{"name":"sndCollect_2","path":"sounds/sndCollect_2/sndCollect_2.yy",},},
     {"id":{"name":"sndCorrect","path":"sounds/sndCorrect/sndCorrect.yy",},},

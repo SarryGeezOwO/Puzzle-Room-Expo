@@ -27,24 +27,104 @@ PipeTile = function() constructor {
 	};
 };
 
+selectedPipe = [0, 0]
 StartPipe = {
 	pos : [0, 0],
-	requiredConn : "NORTH" // The requried connection of the pipe
+	requiredConn : "NORTH"
 };
 
 EndPipe = {
-	pos : [2, 3],
-	requiredConn : "EAST" // The requried connection of the pipe
+	pos : [0, 0],
+	requiredConn : "WEST"
 };
-selectedPipe = [0, 0]
 
-gridSize = 4 // both H and V
+gridSize = 4;
 pipes = [
-    [straightPipe, elbowPipe, tJuncPipe, elbowPipe],
-    [elbowPipe, elbowPipe, tJuncPipe, tJuncPipe],
-    [elbowPipe, straightPipe, elbowPipe, tJuncPipe],
-    [crossPipe, tJuncPipe, tJuncPipe, straightPipe]
-]
+    [emptyPipe, emptyPipe, emptyPipe, emptyPipe],
+    [emptyPipe, emptyPipe, emptyPipe, emptyPipe],
+    [emptyPipe, emptyPipe, emptyPipe, emptyPipe],
+    [emptyPipe, emptyPipe, emptyPipe, emptyPipe]
+];
+
+levels = [
+    {
+        startP: { pos: [0, 0], requiredConn: "WEST" },
+        endP: { pos: [3, 3], requiredConn: "WEST" },
+        pipes: [
+            [elbowPipe, straightPipe, tJuncPipe, elbowPipe],
+            [tJuncPipe, elbowPipe, elbowPipe, tJuncPipe],
+            [elbowPipe, tJuncPipe, straightPipe, elbowPipe],
+            [tJuncPipe, elbowPipe, emptyPipe, elbowPipe]
+        ]
+    },
+	{
+        startP: { pos: [3, 0], requiredConn: "SOUTH" },
+        endP: { pos: [0, 3], requiredConn: "EAST" },
+		pipes: [
+			[elbowPipe, tJuncPipe, elbowPipe, straightPipe],
+		    [tJuncPipe, crossPipe, tJuncPipe, elbowPipe],
+		    [elbowPipe, elbowPipe, crossPipe, elbowPipe],
+		    [elbowPipe, tJuncPipe, elbowPipe, tJuncPipe]
+		]
+	},
+	{
+        startP: { pos: [1, 0], requiredConn: "WEST" },
+        endP: { pos: [2, 3], requiredConn: "EAST" },
+		pipes: [
+			[elbowPipe, straightPipe, elbowPipe, elbowPipe],
+		    [tJuncPipe, crossPipe, straightPipe, straightPipe],
+		    [straightPipe, elbowPipe, tJuncPipe, straightPipe],
+		    [elbowPipe, straightPipe, elbowPipe, elbowPipe]
+		]
+	},
+	{
+        startP: { pos: [0, 2], requiredConn: "NORTH" },
+        endP: { pos: [0, 1], requiredConn: "NORTH" },
+		pipes: [
+			[elbowPipe, straightPipe, straightPipe, elbowPipe],
+		    [tJuncPipe, tJuncPipe, crossPipe, elbowPipe],
+		    [elbowPipe, tJuncPipe, elbowPipe, elbowPipe],
+		    [elbowPipe, elbowPipe, crossPipe, straightPipe]
+		]
+	},
+	{
+        startP: { pos: [2, 3], requiredConn: "EAST" },
+        endP: { pos: [3, 2], requiredConn: "SOUTH" },
+		pipes: [
+			[elbowPipe, straightPipe, elbowPipe, elbowPipe],
+		    [straightPipe, elbowPipe, straightPipe, straightPipe],
+		    [tJuncPipe, straightPipe, tJuncPipe, straightPipe],
+		    [elbowPipe, straightPipe, elbowPipe, elbowPipe]
+		]
+	}
+];
+
+
+randomize()
+var lvl_index = irandom(array_length(oGH_PipeLeak.levels) - 1);
+load_level(lvl_index)
+
+// Randomly rotate all pipes
+for (var r = 0; r < gridSize; r++) {
+	for (var c = 0; c < gridSize; c++) {
+		var p = pipes[r][c];
+		if (p.isPipe) {
+			var rotTimes = irandom(3); // 0 to 3
+			for (var i = 0; i < rotTimes; i++) {
+				p.rotate();
+			}
+		}
+	}
+}
+
+function load_level(index) {
+	var lvl = oGH_PipeLeak.levels[index];
+
+	oGH_PipeLeak.StartPipe = lvl.startP;
+	oGH_PipeLeak.EndPipe = lvl.endP;
+	oGH_PipeLeak.gridSize = 4;
+	oGH_PipeLeak.pipes = lvl.pipes;
+}
 
 function is_flow_valid(gSize, startIndex, endIndex, startP, endP) {
 	var DIRS = ["NORTH", "EAST", "SOUTH", "WEST"];

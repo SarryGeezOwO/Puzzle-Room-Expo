@@ -50,6 +50,7 @@ function reset() {
 		qr = irandom_range(0, array_length(global.riddle_questions)-1)
 	}
 	
+	oGH_RiddleMeClam.selected = 0
 	oGH_RiddleMeClam.questionI = qr
 	oGH_RiddleMeClam.questionT = global.riddle_questions[oGH_RiddleMeClam.questionI]
 	oGH_RiddleMeClam.curTextLen = 0
