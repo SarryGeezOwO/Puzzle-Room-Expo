@@ -16,5 +16,6 @@ if (global.isMenuOpen) {
 
 if (key && isGameOver) {
 	// Return
+	audio_play_sound(sndMenuSelected, 2, false, 1)
 	oGameManager.goback_game()
 }

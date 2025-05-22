@@ -10,11 +10,16 @@ if (fireTimer >= 0) {
 }
 
 // Minigame end
-if (harpoonLeft <= 0) {
+var count = 0 
+with(oLionFish) {
+	count++
+}
+
+if (harpoonLeft <= 0 || count <= 0) {
 	oMG_EndUI.isGameOver = true
 }
 
-if (shootKey && fireTimer <= 0 && !oMG_EndUI.isGameOver)
+if (shootKey && fireTimer <= 0 && !oMG_EndUI.isGameOver && !global.isMenuOpen)
 {
 	shoot();
 }

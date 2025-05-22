@@ -13,10 +13,15 @@
 [/] Auto generated Pipes
 [/] Gates requiring Items, with description
 [/] End Gate
-[ ] End Screen
+[/] End Screen
 [/] Minigame item drops
 [/] Riddle me clam Minigame
 [ ] Lionfish Reimplementation
 [ ] Tilemap redesighn
-[ ] Sound effects
+[/] Sound effects
+[ ] maxinum retries on Underfishing
+[ ] Missing Sprites
+[/] Exit on minigames is just plain broken lmao
+[ ] Heart System - Score zero lose 1 heart yipiee
+[/] Fade Transition when entering a game
 [/] minigames disappear on completion, but still guranteeing an item drop or some shit

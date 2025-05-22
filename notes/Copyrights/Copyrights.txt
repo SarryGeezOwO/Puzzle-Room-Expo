@@ -2,3 +2,6 @@ Menu_Select_00.wav by LittleRobotSoundFactory -- https://freesound.org/s/270401/
 Gamepad icons created by Smashicons
 Keyboard icons created by iconfield 
 Main Menu Icons created by Cheri
+
+Game background Music loop short by ManuelGraf -- https://freesound.org/s/410574/ -- License: Attribution 4.0
+06901 swooshy fight straight hit.wav by Robinhood76 -- https://freesound.org/s/368314/ -- License: Attribution NonCommercial 4.0

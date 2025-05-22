@@ -1,14 +1,15 @@
 // Don't advance on StopTime or MainMenu is the current room
-if (!global.stopGameTime && !isMainMenu) {
+if (!global.stopGameTime && !isMainMenu && !global.isGameOver) {
 	global.gameTime -= delta_time / 1000000	
 }
+global.gameTime = clamp(global.gameTime, 0, 9999)
 
 // Toggle Inventory
 var tabKey = keyboard_check_pressed( vk_tab )
 if (hasController) {
 	tabKey = gamepad_button_check_pressed(devices[0], gp_face4)
 }
-if (tabKey) global.isInventoryOpen = !global.isInventoryOpen 
+if (tabKey && !global.isGameOver) global.isInventoryOpen = !global.isInventoryOpen 
 
 
 // Toggle menu
@@ -19,7 +20,7 @@ if (hasController) {
 }
 
 // toggable only when outside of settings and HTP
-if menuBtn && menuTimer > 0.35 && !global.settingsOpen && !global.htpOpened {
+if menuBtn && menuTimer > 0.35 && !global.settingsOpen && !global.htpOpened && !global.isGameOver {
 	if (!isMainMenu && room != r_loading) {
 		global.isMenuOpen = !global.isMenuOpen
 		menuTimer = 0	

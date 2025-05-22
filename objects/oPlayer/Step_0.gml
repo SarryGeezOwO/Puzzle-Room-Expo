@@ -1,5 +1,5 @@
 // Keyboard
-if (!global.isMenuOpen) {
+if (!global.isMenuOpen && !global.isGameOver) {
 	wKey = keyboard_check( ord("W") )
 	sKey = keyboard_check( ord("S") )
 	aKey = keyboard_check( ord("A") )
@@ -12,7 +12,7 @@ rawInput[0] = dKey - aKey;
 rawInput[1] = sKey - wKey;
 
 // Controller
-if (oGameManager.hasController && !global.isMenuOpen) {
+if (oGameManager.hasController && !global.isMenuOpen && !global.isGameOver) {
 	var dev = oGameManager.devices[0];
 	var lh = gamepad_axis_value(dev, gp_axislh)
 	var lv = gamepad_axis_value(dev, gp_axislv)
@@ -24,7 +24,7 @@ if (oGameManager.hasController && !global.isMenuOpen) {
 }
 
 // Toggle off all input keys
-if (global.isMenuOpen) {
+if (global.isMenuOpen || global.isGameOver) {
 	isVaccuming = false
 	isInteracting = false
 	rawInput = [0, 0]

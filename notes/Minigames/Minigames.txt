@@ -3,7 +3,6 @@
 [/] 2 - Underfishing
 [/] 3 - Pipe Leaks
 [/] 4 - Riddle me clam
-[X] 5 - Grazing Seaweeds
 
 [/] - Minigame implemented
 [X] - Minigame not yet implemented

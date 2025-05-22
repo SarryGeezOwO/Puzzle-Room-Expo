@@ -18,6 +18,10 @@ function processTrash(type) {
 	
 	if (isCorrect) {
 		oMG_EndUI.gameScore += 100;
+		audio_play_sound(sndCorrect, 1, false)
+	}
+	else {
+		audio_play_sound(sndWrong, 1, false)	
 	}
 	
 	assTimer = 0.6;

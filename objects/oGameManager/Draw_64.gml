@@ -51,3 +51,54 @@ draw_sprite_ext(
 	ROOM_WIDTH-30, 
 	25, 0.3, 0.3, 0, c_white, 1
 )
+
+if (global.isGameOver) {
+	draw_set_alpha(0.75)
+	draw_set_colour(c_black)
+	draw_rectangle(0, 0, ROOM_WIDTH, ROOM_HEIGHT, false)
+	draw_set_alpha(1)
+	
+	var cx = ROOM_WIDTH/2
+	var cy = ROOM_HEIGHT/2
+	var width = 250 // This is half
+	draw_set_colour(make_colour_rgb(255, 239, 213))
+	draw_rectangle(cx-width, cy-200, cx+width, cy+200, false)
+	
+	draw_set_colour(make_colour_rgb(47, 25, 17))
+	draw_rectangle(cx-width, cy-200, cx+width, cy-140, false)
+	
+	draw_sprite_ext(
+		Expo_Fish, 0, cx-250, cy-150, 0.65, 0.65, 0, c_white, 1
+	)
+	
+	draw_set_valign(fa_middle)
+	draw_set_halign(fa_center)
+	draw_set_font(f_big)
+	draw_set_colour(c_white)
+	draw_text(cx, cy-167, (global.isGameWon) ? "BOB ESCAPED!" : "GAME OVER!")
+	
+	draw_set_valign(fa_top)
+	draw_set_halign(fa_left)
+	draw_set_colour(make_colour_rgb(47, 25, 17))
+	draw_text(cx-25, cy-100, "Time Completed")
+	var tc = abs(global.gameTime - 180);
+	var m = floor(tc / 60)
+	var s = floor(tc % 60)	
+	var fTime = time_format(m , s)
+	
+	draw_text(cx-25, cy-70, fTime) // 3 mins eh
+
+	draw_text(cx-25, cy-25, "Score")
+	draw_text(cx-25, cy+5, string(global.gameTrueScore))
+	
+	draw_set_valign(fa_middle)
+	draw_set_halign(fa_center)
+	draw_text(cx-80, cy+140, "PRESS")
+	draw_controls(cx-10, cy+140, oGameManager.hasController, CTR_SPACE_CROSS)
+	draw_text(cx+90, cy+140, "TO RETURN")
+}
+
+draw_set_valign(fa_top)
+draw_set_halign(fa_left)
+draw_set_colour(c_white)
+draw_set_font(f_default)

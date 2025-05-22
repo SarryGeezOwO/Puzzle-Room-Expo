@@ -20,6 +20,11 @@ newY = clamp(newY, 0, room_height - camera_get_view_height(cam))
 
 camera_set_view_pos(cam, 0, newY)
 if (place_meeting(x, y, oPearl)) {
+	if (!playSnd) {
+		playSnd = true
+		audio_play_sound(sndClick, 1, false)
+	}
+	
 	hasReachEnd = true
 	oPearl.x = x+8
 	oPearl.y = y+25

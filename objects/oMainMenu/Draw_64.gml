@@ -83,5 +83,14 @@ draw_tooltip_control(38, botm-(tto),   80, isPS, CTR_A_LEFT, "Left")
 draw_tooltip_control(38, botm,         80, isPS, CTR_D_RIGHT, "Right")
 draw_tooltip_control(156,botm,        100, isPS, CTR_SPACE_CROSS, "Confirm")
 
+// Draw Fade when starting a new game
+if (startFade) {
+	draw_set_alpha(fadeTimer)
+	draw_set_colour(c_black)
+	draw_rectangle(0, 0, room_width, room_height, false)	
+}
+
+draw_set_alpha(1)
+draw_set_colour(c_white)
 draw_set_font(f_default)
 draw_set_valign(fa_top)

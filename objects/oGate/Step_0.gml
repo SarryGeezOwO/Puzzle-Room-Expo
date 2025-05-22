@@ -1,7 +1,6 @@
-if (CLOSE_DIR_Y) isNear = point_distance(oPlayer.x, 0, x, 0) < range
-else isNear = point_distance(0, oPlayer.y, 0, y) < range
+isNear = point_distance(oPlayer.x, oPlayer.y, x, y) < range
 
-if isNear && oPlayer.isInteracting && !isOpen
+if isNear && oPlayer.isInteracting && !isOpen && oGameManager.getItemCountInventory(ITEM_ID) >= REQUIRED
 {
 	interact_prog += delta_time / 1000000
 }
@@ -16,6 +15,8 @@ interact_prog = clamp(interact_prog, 0, interact_prog_max)
 if interact_prog >= interact_prog_max {
 	if (oGameManager.getItemCountInventory(ITEM_ID) >= REQUIRED) {
 		isOpen = true	
+		audio_play_sound(sndTypeWriter_click, 5, false)
+		audio_play_sound(sndCorrect, 1, false, 0.35)
 		oGameManager.removeItemInventory(ITEM_ID, REQUIRED)
 	}
 }

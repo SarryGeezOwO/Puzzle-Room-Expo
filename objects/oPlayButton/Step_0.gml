@@ -10,14 +10,17 @@ if (curLayer != "Selected" || !oMainMenu.inputGoodToGo) {
 	isPressed = false
 }
 
-
+ 
 // Activate
 if (rel && curLayer == "Selected" && oMainMenu.inputGoodToGo) {
 	var rooms = tag_get_asset_ids("Overworld", asset_room)
+	audio_sound_gain(sndBG, 0, 500)
 	
 	global.baseRoom = rooms[irandom_range(0, array_length(rooms)-1)]
 	ds_map_replace(global.minigames, -69, global.baseRoom)
-	
-	
-	room_goto(global.baseRoom)
+	oMainMenu.startFade = true
+}
+
+if (oMainMenu.startFade && oMainMenu.fadeTimer >= 1.2) { 
+	room_goto(global.baseRoom)	
 }

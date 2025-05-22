@@ -26,7 +26,11 @@ global.riddle_questions = [
   "Its name came from the Greek word Atlantikos which at the time means 'Sea of Atlas'",
   "It is a seaweed extract used as an emulsifier in a variety of common products like peanut butter, toothpaste, and cosmetics",
   "These are magical sea lions who could take human form from the Scottish Myths",
-  "It is the deepest part of the ocean"
+  "It is the deepest part of the ocean",
+  "It is the longest mountain range on the planet",
+  "It is the second most polluted ocean",
+  "It is the only sea without a land border",
+  "Where is the largest 'dead-zone' on the planet located?"
 ];
 
 global.riddle_answers = [
@@ -38,7 +42,11 @@ global.riddle_answers = [
   "Atlantic Ocean",
   "Carrageenan",
   "Selkies",
-  "Challenger Deep"
+  "Challenger Deep",
+  "Mid-Ocean Ridge",
+  "Indian Ocean",
+  "Sargasso Sea", 
+  "Black Sea"
 ];
 
 

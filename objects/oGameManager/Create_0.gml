@@ -1,6 +1,4 @@
 // Maps / Dictionaries
-randomize() // This shit exists??
-
 global.menuOptions = ds_map_create() // index, Function
 global.HTP_Names = ds_map_create() // index, Name
 global.minigames = ds_map_create()
@@ -8,6 +6,9 @@ global.interactableMap = ds_map_create()
 global.inventoryMap = ds_map_create() // Item_ID, Quantity
 global.itemDescMap = ds_map_create() // Item_ID, Description
 
+// Resetable
+global.isGameOver = false // Is it finally over joe?? this is for both win and loss
+global.isGameWon = false // Determines the text if won or loss
 global.gameTrueScore = 0 // Let's go with Thousands for average sake
 global.gameTime = 180 // 3 Minutes or something IDK
 global.stopGameTime = false
@@ -17,6 +18,8 @@ global.isMenuOpen = false
 global.isInventoryOpen = false
 itemDrawQueue = ds_queue_create()
 itemDrawTimer = 0
+
+audio_play_sound(sndBG, 0, true, 0.6)
 
 // Disable mouse cursor
 window_set_cursor(cr_none)
@@ -46,6 +49,7 @@ if (global.managerCount == 1) { // there's only one manager
 devices = [];
 hasController = false;
 isMainMenu = room == r_MainMenu 
+menuExitCalled = false
 
 // interactables Map 
 function addInteractable(tag_id, obj_type) {
@@ -180,7 +184,7 @@ function menu_exit() {
 	oGameManager.room_to_load = -1
 	oGameManager.lastPlayerPos = [-1, -1]
 	oGameManager.loadPlayerPos = false
-	global.gameTime = 180 // 3 Minutes or something IDK
+	global.gameTime = 180 // 3 Minutes or something IDK 
 	global.stopGameTime = false
 	global.InsideMinigame = false
 	global.isMenuOpen = false
@@ -188,11 +192,13 @@ function menu_exit() {
 	global.settingsOpen = false
 	global.isInventoryOpen = false
 	global.gameTrueScore = 0
+	global.isGameOver = false
+	global.isGameWon = false
 	ds_map_clear(global.inventoryMap)
 	ds_map_clear(global.interactableMap)
-	ds_queue_clear(itemDrawQueue)
-	
-	room_persistent = false // Well, I mean overworld rooms are the only persistent rooms anyways
-	room_goto(r_MainMenu)
-	room_set_persistent(global.baseRoom, true) // BaseRoom refers to the selected OverWorld map
+	ds_queue_clear(itemDrawQueue) 
+
+	room_goto(global.baseRoom)
+	room_persistent = false // is in the overworld!!!
+	menuExitCalled = true
 }

@@ -67,3 +67,7 @@ if (press) {
 	audio_play_sound(sndMenuSelected, 1, false)
 }
 
+// Fade timer
+if (startFade) { 
+	fadeTimer += delta_time / 1000000
+}

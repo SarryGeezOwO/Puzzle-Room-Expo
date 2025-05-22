@@ -3,6 +3,9 @@ timeForward = true
 amplitude = 5
 offset = 0
 
+fadeTimer = 0
+startFade = false
+
 selectedTag = 0
 tooltip = "..."
 
